@@ -1,0 +1,15 @@
+/* main.css */
+@charset "UTF-8";
+
+@import url(css/common.css);
+
+
+body {
+    color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
+}
+nav {
+    text-align: center;
+}
+
+
