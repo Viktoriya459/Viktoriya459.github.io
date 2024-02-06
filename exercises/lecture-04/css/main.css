@@ -86,72 +86,72 @@ div ~ p {
 /* RGB у десятковій системі: */
 
 .black {
-    color: rgb(0, 0, 0);
+    color: rgb(0 0 0);
 }
 .blue {
-    color: rgb(0, 0, 255);
+    color: rgb(0 0 255);
 }
 .green {
-    color: rgb(0, 128, 0);
+    color: rgb(0 128 0);
 }
 .red {
-    color: rgb(255, 0, 0);
+    color: rgb(255 0 0);
 }
 .white {
-    color: rgb(255, 255, 255);
+    color: rgb(255 255 255);
 }
 .yellow {
-    color: rgb(255, 255, 0);
+    color: rgb(255 255 0);
 }
 /* відсотки */
 
 .black {
-    color: rgb(0%, 0%, 0%);
+    color: rgb(0% 0% 0%);
 }
 
 .blue {
-    color: rgb(0%, 0%, 100%);
+    color: rgb(0% 0% 100%);
 }
 
 .green {
-    color: rgb(0%, 50%, 0%);
+    color: rgb(0% 50% 0%);
 }
 
 .red {
-    color: rgb(100%, 0%, 0%);
+    color: rgb(100% 0% 0%);
 }
 
 .white {
-    color: rgb(100%, 100%, 100%);
+    color: rgb(100% 100% 100%);
 }
 
 .yellow {
-    color: rgb(100%, 100%, 0%);
+    color: rgb(100% 100% 0%);
 }
 /* альфа-канал */
 
 .black {
-    color: rgba(0, 0, 0, 1);
+    color: rgba(0 0 0 / 1);
 }
 
 .blue {
-    color: rgba(0, 0, 255, 1);
+    color: rgba(0 0 255 / 1);
 }
 
 .green {
-    color: rgba(0, 128, 0, 1);
+    color: rgba(0 255 0 / 1);
 }
 
 .red {
-    color: rgba(255, 0, 0, 1);
+    color: rgba(255 0 0 / 1);
 }
 
 .white {
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255 255 255 / 1);
 }
 
 .yellow {
-    color: rgba(255, 255, 0, 1);
+    color: rgba(255 255 0 / 1);
 }
 /* 6. Використовцючи hsl, створіть для класу translucent-box напівпрозору властивість background з такими значеннями:
     - Hue = 0deg
