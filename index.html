@@ -2,49 +2,128 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Site</title>
+    <title><h1>My Site</h1></title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <!-- page header -->
-    <header>
+    <header class="page-header">
         <!-- brand -->
-     
+        <a href="/index.html" class="brand">Shop</a>
         <!-- navigation -->
-        <nav>
-            <a href="index.html">Home page</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
             <a href="catalog.html">Catalog</a>
+            <a href="blog.html">Blog</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
             <a href="./exercises/index.html">Exercises</a>
         </nav>
+<!-- створіть тут підрозділ nav з таким вмістом -->
+        <nav>
+            <a href="#"></a>
+            <a href="cart.html"></a>
+            <a href="#!"></a>
+            <a href="#" class="far fa-heart"></a>
+            <a href="#" class="fas fa-dolly-flatbed"></a>
+            <a href="#" class="far fa-user"></a>
+        </nav>
     </header>
 
+    <!-- hero 
+    <section id="hero" class="hero">
+        <div class="container">
+            <p>New Inspiration 2024</p>
+            <h1>15% offon new season!</h1> 
+            <a href="#!" class="btn">Browse Collection</a>
+        </div>
+    </section>
+    -->
+    <!-- main content -->
+    <main>
+        <div class="container">
+            <header>
+                <h2>Our <span>products</span></h2>
+            </header>
+            <div class="product-container">
+                <article class="product">
+                    <div class="icons">
+                        <a href="" class="fas fa-shopping-cart"></a>
+                        <a href="" class="fas fa-heart"></a>
+                        <a href="" class="fas fa-eye"></a>
+                    </div>
+                </article>
+                <div class="image"></div>
+                <div class="content">
+                    <h3>Product name</h3>
+                    <div class="price">111</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- divider -->
+    <section id="divider"></section>
+    <!-- services -->
+    <section id="services"></section>
     <!-- page footer -->
-    <footer>
+    <footer class="page-footer">
         <div class="container">
             <section id="footer-main">
+                
                 <div class="footer-main-item">
-                <h3>About</h3>
-                <ul>
-                    <li><a href="">Service</a></li>
-                    <li><a href="">Profiles</a></li>
-                    <li><a href="">Prices</a></li>
-                    <li><a href="">Customers</a></li>
-                    <li hidden><a href="./exercises/index.html">Exercises</a></li>
+                    <h3 class="footer-title">About</h3>
+                    <ul>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Profiles</a></li>
+                        <li><a href="">Priceas</a></li>
+                        <li><a href="">Customers</a></li>
+                        <li><a href="./exercises/index.html">Exercises</a></li>
+                    </ul>
+                </div>
+                <div class="footer-main-item">
+                    <h3 class="footer-title">Resources</h3>
+                    <ul>
+                        <li><a href="">Docs</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">eBooks</a></li>
+                        <li><a href="">Webinars</a></li>
+                    </ul>
+                </div>
+                <div class="footer-main-item">
+                    <h3 class="footer-title">Contact</h3>
+                    <ul>
+                        <li><a href="">Help</a></li>
+                        <li><a href="">Sales</a></li>
+                        <li><a href="">Advertise</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="footer-social">
+                <ul class="list-unstyled">
+                    <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fab fa-github"></i></a></li>
+                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href=""><i class="fab fa-youtube"></i></a></li>
                 </ul>
-        </div>
+            </section>
             <a href="https://github.com/Viktoriya459" target="_blank">My github profile</a>
-            <pre>
+            <section class="footer-ligal">
+                <ul class="footer-ligal-list">
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">&copy; 2024 Copyright Shopaholic Inc.</a></li>
+                </ul>
 
-            </pre>
-            <div class="footer-ligal">
-                &copy; Hello&nbsp;world
-            </div> 
+            </section>
+        </div>
     </footer>
 </body>
 </html>

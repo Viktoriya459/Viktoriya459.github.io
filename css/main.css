@@ -2,12 +2,39 @@
 @charset "UTF-8";
 
 @import url(common.css);
-@import url(styles.css);
 @import url(nav.css);
 @import url(hero.css);
 @import url(catalog.css);
 @import url(footer.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css);
 body {
     color: var(--primary-text-color);
     background-color: var(--primary-bg-color);
+    font-family: var(--primary-font-family);
+    font-size: var(--primary-font-size);
+}
+
+/* 9. Встановити, за допомогою визначених у файлі css/common.css змінних, властивості елемента body:
+font-family
+font-size
+Встановити властивість font-weight: 700 для елементів h1, h2, h3
+Встановити властивість font-size: 1.45rem для елемента h1
+Встановити властивість font-size: 1.3rem для елемента h2
+Визначити клас .list-unstyled з властивістю list-style: none
+Визначити клас .footer-social */
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+h1 {
+    font-size: 1.45rem;
+}
+h2 {
+    font-size: 1.3rem;
+}
+.list-unstyled {
+    list-style: none;
+}
+.footer-social {
+    /* якісь стилі */
 }

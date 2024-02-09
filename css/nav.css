@@ -5,5 +5,5 @@
 }
 
 .page-header .brand {
-    color: salmon;
+    color: var(--anchor-active-color);
 }
