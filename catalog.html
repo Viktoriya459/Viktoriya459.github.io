@@ -2,27 +2,107 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Каталог</title>
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home page</a>
-        <a href="catalog.html">Catalog</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="./exercises/index.html">Exercises</a>
-    </nav>
-    <header>
-        <h1>Catalog page</h1>
+    <!-- page header -->
+    <header class="page-header">
+        <!-- brand -->
+        <a href="/index.html" class="brand">Shop</a>
+        <!-- navigation -->
+        <nav class="navbar">
+            <a href="/index.html">Home</a>
+            <a href="/catalog.html">Catalog</a>
+            <a href="./blog.html">Blog</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>    
+        </nav>
+
+        <nav class="toolbar">
+            <a href="#" class="far fa-heart"></a>
+            <a href="/cart.html" class="fas fa-dolly"></a>
+            <a href="#" class="fas fa-user"></a>
+        </nav>
     </header>
-    <footer>
-        <a href="https://github.com/Viktoriya459" target="_blank">My github profile</a>
-        <div class="footer-ligal">
-            &copy; Hello&nbsp;world
-        </div> 
+    <h1>Catalog page</h1>
+
+    <section>
+        <aside>
+            <h2 class="text-uppercase">Categories</h2>
+                    
+            <div class="bg-dark text-white">
+                <strong class="text-uppercase">Fashion &amp; Acc</strong>
+            </div>
+                    
+            <ul class="list-unstyled categories">
+                <li><a href="#!">Women's T-Shirts</a></li>
+                <li><a href="#!">Men's T-Shirts</a></li>
+                <li><a href="#!">Dresses</a></li>
+                <li><a href="#!">Novelty socks</a></li>
+                <li><a href="#!">Women's sunglasses</a></li>
+                <li><a href="#!">Men's sunglasses</a></li>
+            </ul>
+        </aside>
+        <main>
+
+        </main>
+    </section>
+
+    <!-- page footer -->
+    <footer class="">
+        <div class="container page-footer">
+            <section class="footer-main">
+                <div class="footer-main-item">
+                    <h3 class="footer-title">About</h3>
+                    <ul>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Profiles</a></li>
+                        <li><a href="">Prices</a></li>
+                        <li><a href="">Customers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-main-item">
+                    <h3 class="footer-title">Resources</h3>
+                    <ul>
+                        <li><a href="">Docs</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">eBooks</a></li>
+                        <li><a href="">Webinars</a></li>
+                    </ul>
+                </div>
+                <div class="footer-main-item">
+                    <h3 class="footer-title">Contact</h3>
+                    <ul>
+                        <li><a href="">Help</a></li>
+                        <li><a href="">Sales</a></li>
+                        <li><a href="">Advertise</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="footer-social">
+                <ul class="footer-social-list">
+                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://linkedin.com.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </section>
+           
+            <section class="footer-ligal">
+                <ul class="footer-ligal-list">
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">&copy; 2024 Copyright Shopaholic Inc.</a></li>
+                </ul>
+                
+            </section>
+        </div>
     </footer>
 </body>
 </html>

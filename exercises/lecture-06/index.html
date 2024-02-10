@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lecture #6 Селектори псевдокласів</title>
+	<link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <a href="../../index.html">Home</a> | <a href="../index.html">Exercises</a>  <!-- це для навігації -->
+	<ul>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Customers</a></li>
+        <li><a href="#">Careers</a></li>
+    </ul>
+    
+<!-- 3. - Якщо введене у поле input значення знаходтьбся в межах 1-10, встановіть фоновий колір зеленим з прозорістю 0.25
+- Якщо введене у поле input значення знаходтьбся поза межами 1-10, встановіть фоновий колір чераоним з прозорістю 0.25
+ -->
+    <input type="number" value="1" min="1" max="10" required/>
+
+<!-- 4. - Встановіть першому елементу li помаранчевий колір -->
+<div class="ch4">    
+    <ul>
+        <li>This text will be orange.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+    </ul>
+</div>     
+
+
+<!-- 5. - Встановіть першому елементу li та першому елементу span помаранчевий колір -->
+<div class="ch5">
+    <ul>
+        <li>This text will be orange.</li>
+        <li>Lorem ipsum dolor sit amet. <span>This text will be orange.</span></li>
+        <li>Lorem ipsum dolor sit amet.</li>
+     </ul>
+</div>
+<!-- 6. - Встановіть останньому елементу li та останньому елементу span помаранчевий колір -->
+<div class="ch6">
+     <ul>
+        <li>Lorem ipsum. <span>Lorem ipsum.</span> <span>This text will be orange.</span></li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>This text will be orange.</li>
+     </ul>
+</div>
+<!-- 7. - Встановіть елементу li помаранчевий колір, якщо він не має аргумента class="first-item"
+- Встановіть всім елементаи li чорний текст і жовтий фон, крім елемента li з класом .first-item та останнього елемента li у списку -->
+<div class="ch7">
+     <ul>
+        <li class="first-item">Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+     </ul>
+</div>
+<!-- 8. - Встановіть дпугому елементу li помаранчевий колір
+- Встановіть кожному парному елементу li помаранчевий колір
+- Встановіть кожному елементу li помаранчевий колір за фрпмулою 2n+6 -->
+
+    <ol>
+        <li>Alpha</li>
+        <li>Beta</li>
+        <li>Gamma</li>
+        <li>Delta</li>
+        <li>Epsilon</li>
+        <li>Zeta</li>
+        <li>Eta</li>
+        <li>Theta</li>
+        <li>Iota</li>
+        <li>Kappa</li>
+    </ol>
+
+<!-- 9. - Вставте за допомогою псевдоелемента before перед Укрїні слово Слава -->
+
+    <h1 class="ua">Україні!</h1>
+
+<!-- 10. - Вчтавте за допомогою псевдоелемента after після Героям слово Слава! -->
+
+    <h1 class="hero">Героям</h1>
+
+<!-- 11. - Вставте за допомогою псевдоелемента before символ параграфу -->
+
+    <p class="cont">
+    Згенерований вміст також дозволяє нам вставляти більш складні символи за допомогою екранування: симввол параграфу відповідає екрановааій послідовності "\0A7"
+    </p>
+
+</body>
+</html>
