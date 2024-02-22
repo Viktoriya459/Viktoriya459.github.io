@@ -2,7 +2,7 @@
   --min: 30ch;
 
   display: grid;
-  
+  grid-template-columns: repeat(auto-fit, minmax(var(--min), 1fr));
   gap: 1rem;
 }
 
@@ -10,3 +10,10 @@ body {
   --padding: 5vw;
   --max-width: 180ch;
 }
+
+.card {
+  min-width: var(--min);
+}
+/* Налаштуйте grid-властивості так, щоб кожний елемент з класом card мав мінімальну ширину, 
+що дорівнює 100% або var(--min), та максимальну ширину, що дорівнює мінімальній ширині або 1fr.
+Встановіть автоматичну підгонку стовпчиків. */

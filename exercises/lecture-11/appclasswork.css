@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.box {
+    color: white;
+    font-size: 2rem;
+    /* border: 3px solid gray; */
+    /* padding: 3rem; */
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+/* .flex-container {
+    width: 100%;
+    display: flex;
+    /* flex-direction: row; 
+    justify-content: space-evenly;
+    gap: 2%;
+    flex-wrap: wrap;
+} */
+
+/* .box-c {
+    /* flex-grow: 2; */
+    /* flex: 0 1 auto;
+} */
+
+/* 
+.col-1 {
+    flex: 0 1 auto;
+    width: calc(100% / 12);
+}
+
+
+.col-2 {
+    flex: 0 1 auto;
+    width: calc(200% / 12);
+}
+
+
+.col-3 {
+    flex: 0 1 auto;
+    width: calc(300% / 12);
+}
+
+
+.col-4 {
+    flex: 0 1 auto;
+    width: calc(400% / 12);
+}
+
+
+.col-5 {
+    flex: 0 1 auto;
+    width: calc(500% / 12);
+}
+
+
+.col-6 {
+    flex: 0 1 auto;
+    width: calc(600% / 12);
+} */
+
+.grid-container {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto; */
+    /* width: 100%;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 45rem 1fr; 
+    grid-template-areas: 
+    'h h h'
+    's1 m m'
+    'f f f'
+    ; */
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); */
+
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.header {
+    grid-area: h;
+}
+
+.sidebar1 {
+    grid-area: s1;
+}
+.sidebar2 {
+    grid-area: s2;
+}
+
+.main {
+    grid-area: m;
+}
+
+.footer {
+    grid-area: f;
+}
+
+
+.box-a {
+    background-color: red;
+    /* grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3; */
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+}
+.box-b {
+    background-color: gold;
+    grid-row: 2 / 4;
+    grid-column: 2 / 4;
+}
+.box-c {
+    background-color: green;
+}
+.box-d {
+    background-color: aqua;
+}
+.box-e {
+    background-color: blue;
+}
+
+.box-f {
+    background-color: magenta;
+}
+
+
+.nav {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 1.2rem;
+    color: aliceblue;
+}
+
+.green {
+    background-color: green;
+}
+.nav__brand {
+    font-weight: 600;
+}
+
+.nav__items {
+    display: grid;
+    list-style: none;
+    grid-auto-flow: column;
+    gap: .5em;
+}
