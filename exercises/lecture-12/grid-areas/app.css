@@ -22,3 +22,14 @@
 .footer {
     grid-area: footer;
 }
+/* Створіть "Mobile First" media-запит, що перетворює макет іменованих областей з 2-х колонок на 1 колонку, при переході
+ через контрольну точку 786px */
+ @media (min-width: 786px) {
+    .grid-container {
+        grid-template-areas:
+            'header'
+            'sidebar'
+            'main'
+            'footer';
+    }
+}

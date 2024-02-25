@@ -1,17 +1,19 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 .content {
-  height: 200vh;
+  height: 100vh;
   display: grid;
   place-items: center;
 }
 
 header {
-  background: rgb(214 214 214 / .85);
+  background: rgb(214 214 214 / 0.85);
   text-align: center;
   position: fixed;
   z-index: 999;
@@ -28,14 +30,13 @@ header {
     margin-left: 1em;
     color: gray;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-transform: uppercase;
 }
-  
-.navbar a:hover, .toolbar a:hover {
-    color: #000;
+
+.navbar a:hover,.toolbar a:hover {
+  color: #000;
 }
-  
 
 header {
   display: grid;
@@ -48,7 +49,7 @@ nav {
   position: relative;
   display: flex;
 }
-.navbar, .toolbar{
+.navbar, .toolbar {
   margin-top: 2rem;
 }
 
@@ -61,13 +62,21 @@ nav {
 }
 
 .navbar {
+  flex-direction: column;
   grid-column: 3 / 4;
 }
 
-.toolbar a{
+.toolbar a {
   margin-left: .5em;
 }
 
 .navbar a {
   margin-left: 1em;
+}
+@media (min-width: 800px) {
+
+  .navbar {
+    grid-column: 3 / 4;
+    flex-direction: row;
+  }
 }

@@ -1,9 +1,26 @@
+*, 
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --primary-text-color: rgb(7, 7, 90);
     --primary-bg-color: rgba(255, 253, 253, 0.952);
+    --anchor-color: #a39898;
+    --anchor-active-color: rgb(70, 61, 70);
 }
 
 body {
     color: var(--primary-text-color);
     background-color: var(--primary-bg-color);
+}
+
+a {
+    color:var(--anchor-color);
+}
+
+h1, h2, h3 {
+    font-weight: 700;
 }

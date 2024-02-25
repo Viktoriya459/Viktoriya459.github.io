@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 7%;
+    padding: .3rem 5%;
     /* brand */
     > .brand {
         color: var(--anchor-active-color);
@@ -18,10 +18,16 @@
         font-size: 1.1rem;
     }
     > .navbar {
+        position: absolute;
+        top: 99.9%;
+        left: 0;
+        right: 0;
+        background-color: white;
         > a {
             font-size: 1.1rem;
             margin-right: .5rem;
             color: var(--anchor-color);
+            display: block;
         }
         > a:hover {
             color: var(--anchor-active-color);
@@ -44,4 +50,15 @@
 /* .page-header .brand {
     color: var(--anchor-active-color);
 } */
+@media (min-width: 40rem) {
 
+    .page-header {
+        & .navbar {
+            position: relative;
+        }
+        & .navbar > a {
+            display: inline-block;
+        }
+    }
+    
+}
