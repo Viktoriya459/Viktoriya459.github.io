@@ -1,5 +1,6 @@
 /* main.css */
 @charset "UTF-8";
+@import url(carousel.css);
 @import url(cart.css);
 @import url(blog.css);
 @import url(contact.css);

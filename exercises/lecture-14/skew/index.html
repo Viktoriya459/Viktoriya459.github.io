@@ -19,14 +19,16 @@
   margin-left: 5px;
   animation-direction: alternate;
   opacity: 0.7;
+  transform: skew(20deg);
+  animation: skew 3s infinite;
 }
 
 @keyframes skew {
   0% {
-
+    transform: skewX(20deg);
   }
   100% {
-
+    transform: skewX(-20deg);
   }
 }
 body, html {
