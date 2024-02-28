@@ -16,7 +16,7 @@
 
 .slide-track {
     display: flex;
-    width: calc(250px * 14);
+    width: calc(250px*14);
     animation: carousel 40s linear infinite alternate;
 }
 
@@ -38,7 +38,7 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-250px * 7));
+        transform: translateX(calc(-250px*7));
     }
 }
 
@@ -70,8 +70,8 @@
 }
 
 .slider::before {
-    top: 0;
-    left: 0;
+ top: 0;
+ left: 0;
 } 
 .slider::after {
     top: 0;
