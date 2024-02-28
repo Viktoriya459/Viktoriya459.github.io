@@ -1,12 +1,12 @@
 .footer {
     color: var(--anchor-color);
-    background-color: rgb(54, 69, 79);
+    background-color: rgb(135, 206, 235);
 }
 
-.footer ul {
+/* .footer ul {
     list-style: none;
 }
 
 .footer ul > li > a {
     color: #eee;
-}
+} */
