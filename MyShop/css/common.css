@@ -10,7 +10,9 @@
     --primary-bg-color: rgba(255, 253, 253, 0.952);
     --anchor-color: #524141;
     --anchor-active-color: rgb(70, 61, 70);
+
 }
+
 /* 
 body {
     color: var(--primary-text-color);

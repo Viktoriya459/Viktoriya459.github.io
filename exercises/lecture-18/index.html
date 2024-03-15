@@ -7,21 +7,140 @@
 	
 </head>
 <body>
+  <a href="../../index.html">Home</a> | <a href="../index.html">Exercises</a>  <!-- це для навігації -->
 
-  - функція checkAge повертає true, якщо параметр age перевищує 18.
-  - в іншому випадку запитує підтвердження та повертає результат:
-    
-    <script>
+  <p>- функція checkAge повертає true, якщо параметр age перевищує 18.
+  - в іншому випадку запитує підтвердження та повертає результат:</p>
+    <!-- Перепишіть функцію checkAge, видаливши else.
+
+    Чи буде функція працювати інакше, якщо видалити else?
+ - Функція працюватиме так само, як і з else.
+    Чи є різниця в поведінці цих двох варіантів і чому?
+ - Немає, бо функція завжди викликає підтвердження віку -->
+    <!-- <script>
     function checkAge(age) {
       if (age > 18) {
         return true;
-      } else {
-        // ...
+      } 
         return confirm('Did parents allow you?');
-      }
     }
-    </script>
+      console.log(checkAge(17))
+    </script> -->
+<!-- Наступна функція повертає true, якщо параметр age перевищує 18. В іншому випадку запитує підтвердження та 
+  повертає результат. -->
+<!-- <script>
+  function checkAge(age) {
+    return age > 18 ? true : confirm('Did parents allow you?');
+  }
+  console.log(checkAge(20));
+</script> -->
+<!-- <script>
+  function checkAge(age) {
+    return age > 18 || confirm('Did parents allow you?');
+  }
+  console.log(checkAge(17));
+</script> -->
+<!-- Перепишіть функцію checkAge, використовуючи '?'
 
+Перепишіть функцію checkAge, використовуючи '||'
 
+Чи потрібні дужки навколо age > 18
+
+return (age > 18) || confirm('Did parents allow you?');
+- Дужки не обов'язкові, код працюватиме як з ними так і без, це більш зручно для читабельності кода -->
+
+<!-- Напишіть функцію min(a,b), яка повертає найменше з двох чисел a і b. У випадку рівності a == b немає значення, що повертати. 
+  min(2, 5) == 2
+  min(3, -1) == -1
+  min(1, 1) == 1
+реалізуйте функцію min, використовуючи оператор if else
+
+реалізуйте функцію min, використовуючи тернарний оператор-->
+<!-- <script>
+  function min(a, b) {
+    if (a < b) {
+      return a;
+    } else if (a > b) {
+      return b;
+    } else {
+      return undefined; 
+    }
+  }
+
+  function min(a, b) {
+    return a < b ? a : a > b ? b : undefined;
+  }
+  console.log(min(3, -1));
+</script> -->
+<!-- Напишіть функцію pow(x,n), яка повертає x у ступені n. Або, іншими словами, множить x на себе n разів і повертає
+   результат. У цьому завданні функція повинна підтримувати лише натуральні значення n: цілі числа від 1.
+  pow(3, 2) = 3 * 3 = 9
+  pow(3, 3) = 3 * 3 * 3 = 27
+  pow(1, 100) = 1 * 1 * ...* 1 = 1  -->
+
+<!-- <script>
+  function pow(x,n) {
+    if (n == 1){
+      return x;
+    } else {
+      return x * pow(x, n-1);
+    }
+  }
+console.log(pow(1, 100));
+</script> -->
+<!-- Створіть сценарій, де спочатку користувачу пропонують ввести x і n, а потім показують результат pow(x,n), або 
+  повідомлення про неправильне значення параметра n. -->
+<!-- <script>
+  let x = prompt("Введіть значення x:");
+  let n = prompt("Введіть значення n (ціле число від 1 і більше):");
+  function pow(x, n) {
+    if (n < 1 || !Number.isInteger(n) || x < 1 || !Number.isInteger(x)) {
+      alert("Неправильне значення параметра n.");
+    } else {
+      alert(pow(x, n));
+    }
+  }
+
+</script> -->
+<!-- Переписати функцію ask, використовуючи функцію стрілок: -->
+<!-- <script>
+  const ask = (question, yes, no) => {
+    confirm(question) ? yes() : no();
+  };
+  
+</script> -->
+ <!-- Переписати функцію ask, використовуючи функціональний вираз: -->
+<!-- <script>
+  const ask1 = function(question, yes, no) {
+    if (confirm(question)) {
+      yes();
+    } else {
+      no();
+    }
+  };
+  
+</script> -->
+
+<!-- Маємо 3 функції. 
+Яким чином виконати виклик функцій A() і C(), щоб на консолі отримати такий результат A was called C was called foo
+Яким чином виконати виклик функцій B() і C(), щоб на консолі отримати такий результат B was called C was called foo
+-->
+<script>
+  function A() { 
+    console.log('A was called'); 
+      return undefined;
+    }
+  function B() { 
+    console.log('B was called');
+     return false;
+    }
+  function C() { 
+    console.log('C was called'); 
+     return "foo";
+    }
+    console.log((A() || 'A was called') + " " + (C() ?? 'C was called'));
+    console.log((B() || 'B was called') + " " + (C() ?? 'C was called'));
+
+</script>
 </body>
 </html>
