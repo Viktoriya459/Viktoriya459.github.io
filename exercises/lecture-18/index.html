@@ -138,9 +138,10 @@ console.log(pow(1, 100));
     console.log('C was called'); 
      return "foo";
     }
-    console.log((A() || 'A was called') + " " + (C() ?? 'C was called'));
-    console.log((B() || 'B was called') + " " + (C() ?? 'C was called'));
-
+    A();
+    console.log(C());
+    B();
+    console.log(C());
 </script>
 </body>
 </html>
