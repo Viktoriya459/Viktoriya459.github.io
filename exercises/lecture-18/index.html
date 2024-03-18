@@ -17,7 +17,7 @@
  - Функція працюватиме так само, як і з else.
     Чи є різниця в поведінці цих двох варіантів і чому?
  - Немає, бо функція завжди викликає підтвердження віку -->
-    <!-- <script>
+    <script>
     function checkAge(age) {
       if (age > 18) {
         return true;
@@ -25,21 +25,21 @@
         return confirm('Did parents allow you?');
     }
       console.log(checkAge(17))
-    </script> -->
+    </script>
 <!-- Наступна функція повертає true, якщо параметр age перевищує 18. В іншому випадку запитує підтвердження та 
   повертає результат. -->
-<!-- <script>
+<script>
   function checkAge(age) {
     return age > 18 ? true : confirm('Did parents allow you?');
   }
   console.log(checkAge(20));
-</script> -->
-<!-- <script>
+</script>
+<script>
   function checkAge(age) {
     return age > 18 || confirm('Did parents allow you?');
   }
   console.log(checkAge(17));
-</script> -->
+</script>
 <!-- Перепишіть функцію checkAge, використовуючи '?'
 
 Перепишіть функцію checkAge, використовуючи '||'
@@ -56,7 +56,7 @@ return (age > 18) || confirm('Did parents allow you?');
 реалізуйте функцію min, використовуючи оператор if else
 
 реалізуйте функцію min, використовуючи тернарний оператор-->
-<!-- <script>
+<script>
   function min(a, b) {
     if (a < b) {
       return a;
@@ -71,14 +71,14 @@ return (age > 18) || confirm('Did parents allow you?');
     return a < b ? a : a > b ? b : undefined;
   }
   console.log(min(3, -1));
-</script> -->
+</script>
 <!-- Напишіть функцію pow(x,n), яка повертає x у ступені n. Або, іншими словами, множить x на себе n разів і повертає
    результат. У цьому завданні функція повинна підтримувати лише натуральні значення n: цілі числа від 1.
   pow(3, 2) = 3 * 3 = 9
   pow(3, 3) = 3 * 3 * 3 = 27
   pow(1, 100) = 1 * 1 * ...* 1 = 1  -->
 
-<!-- <script>
+<script>
   function pow(x,n) {
     if (n == 1){
       return x;
@@ -87,10 +87,10 @@ return (age > 18) || confirm('Did parents allow you?');
     }
   }
 console.log(pow(1, 100));
-</script> -->
+</script>
 <!-- Створіть сценарій, де спочатку користувачу пропонують ввести x і n, а потім показують результат pow(x,n), або 
   повідомлення про неправильне значення параметра n. -->
-<!-- <script>
+<script>
   let x = prompt("Введіть значення x:");
   let n = prompt("Введіть значення n (ціле число від 1 і більше):");
   function pow(x, n) {
@@ -101,16 +101,16 @@ console.log(pow(1, 100));
     }
   }
 
-</script> -->
+</script>
 <!-- Переписати функцію ask, використовуючи функцію стрілок: -->
-<!-- <script>
+<script>
   const ask = (question, yes, no) => {
     confirm(question) ? yes() : no();
   };
   
-</script> -->
+</script>
  <!-- Переписати функцію ask, використовуючи функціональний вираз: -->
-<!-- <script>
+<script>
   const ask1 = function(question, yes, no) {
     if (confirm(question)) {
       yes();
@@ -119,7 +119,7 @@ console.log(pow(1, 100));
     }
   };
   
-</script> -->
+</script>
 
 <!-- Маємо 3 функції. 
 Яким чином виконати виклик функцій A() і C(), щоб на консолі отримати такий результат A was called C was called foo
@@ -138,10 +138,9 @@ console.log(pow(1, 100));
     console.log('C was called'); 
      return "foo";
     }
-    A();
-    console.log(C());
-    B();
-    console.log(C());
+
+    console.log(A() ?? C());
+    console.log(B() || C());
 </script>
 </body>
 </html>
