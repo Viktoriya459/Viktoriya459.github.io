@@ -38,40 +38,46 @@ const names = ['Batman'];
 // Додати 'Joker' в кінець масиву names:
 names.push('Joker')
 console.log(names)
+
 // Маємо масив names:
 const names1 = ['Batman'];
 // Додати 'Joker' на початок масиву names
 names1.unshift('Joker')
 console.log(names1)
+
 // Маємо масив names:
 names2 = ['Batman', 'Joker', 'Bane'];
 // Додати 'Catwoman' на початок масиву names, використовуючи метод unshift
 names2.unshift('Catwoman')
 console.log(names2)
+
 // Маємо масив names:
 names3 = ['Batman', 'Joker', 'Bane'];
 // Додати 'Catwoman' на початок масиву names, використовуючи оператор ...
 names3 = ['Catwoman', ...names3];
 console.log(names3);
+
 // Маємо масив names
 names4 = ['Batman', 'Joker', 'Bane'];
 // Додати до names елемент 'Catwoman', розмістивши його з індексом 1
 names4.splice(1, 0, 'Catwoman');
 console.log(names4);
+
 // Маємо масив names
 const names5 = ['Batman', 'Catwoman', 'Joker', 'Bane'];
 // Видалити елементи 'Catwoman' і 'Joker' з масиву names:
 names5.splice(1, 2)
 console.log(names5)
+
 // Маємо масив names:
 const names6 = ['Batman', 'Catwoman', 'Joker', 'Bane'];
 // Замінити елементи 'Catwoman' і 'Joker' на 'Alfred' у масиві names
-for (let i = 0; i < names6.length; i++) {
-    if (names6[i] === 'Catwoman' || names6[i] === 'Joker') {
-        names6[i] = 'Alfred';
-    }
+const catwomanIndex = names6.indexOf('Catwoman');
+if (catwomanIndex !== -1) {
+    names6.splice(catwomanIndex, 2, 'Alfred');
 }
 console.log(names6);
+
 // Маємо масив names:
 const names7 = ['Batman', 'Catwoman', 'Joker', 'Bane'];
 // Перевірити чи існує рядок 'Alfred' у масиві names, і якщо не існує, додати його до кінця масиву.
@@ -79,6 +85,7 @@ if (!names7.includes('Alfred')) {
     names7.push('Alfred');
 }
 console.log(names7);
+
 // Маємо масив names:
 const names8 = ['Batman', 'Catwoman', 'Joker', 'Bane', 'Alfred'];
 // Перевірити, чи існує рядок 'Alfred' у масиві names, і якщо існує, видалити його з масиву.
