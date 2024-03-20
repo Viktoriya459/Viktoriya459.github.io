@@ -72,10 +72,7 @@ console.log(names5)
 // Маємо масив names:
 const names6 = ['Batman', 'Catwoman', 'Joker', 'Bane'];
 // Замінити елементи 'Catwoman' і 'Joker' на 'Alfred' у масиві names
-const catwomanIndex = names6.indexOf('Catwoman');
-if (catwomanIndex !== -1) {
-    names6.splice(catwomanIndex, 2, 'Alfred');
-}
+names6.splice(1, 2, 'Alfred');
 console.log(names6);
 
 // Маємо масив names:
