@@ -67,7 +67,7 @@ for (let i = 0; i < headers.length; i++) {
         case 3:
             const oldId = headers[i].id;
             const oldClass = headers[i].className;
-            headers[i].outerHTML = "<h4 class='title fourth' id='" + oldId + "' class='" + oldClass + "'>Fourth Title</h4>";
+            headers[i].outerHTML = `<h4 class="title fourth" id="${oldId}" class="${oldClass}">Fourth Title</h4>`;
             break;
         default:
             break;
