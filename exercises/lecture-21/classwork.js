@@ -145,25 +145,35 @@ function Cart(tax = 0.07, shipping = 0) {
 
 }
 
-const product3 = new Product(3, 'Product 3 name', 31);
-const product4 = new Product(4, 'Product 4 name', 21);
+// const product3 = new Product(3, 'Product 3 name', 31);
+// const product4 = new Product(4, 'Product 4 name', 21);
 
-let shoppingCart = new Cart();
+// let shoppingCart = new Cart();
 
-let productItem = {...product3, amount: 4};
+// let productItem = {...product3, amount: 4};
 
-shoppingCart.addItemToCart(productItem);
-productItem = {...product4, amount: 2};
-shoppingCart.addItemToCart(productItem);
+// shoppingCart.addItemToCart(productItem);
+// productItem = {...product4, amount: 2};
+// shoppingCart.addItemToCart(productItem);
 
-productItem = {...product4, amount: 1};
-shoppingCart.addItemToCart(productItem);
+// productItem = {...product4, amount: 1};
+// shoppingCart.addItemToCart(productItem);
 
-console.log(shoppingCart.totalAmount())
-console.log(shoppingCart.totalInCart())
-shoppingCart.removeItemFromCart(3);
-shoppingCart.removeItemFromCart(3);
+// console.log(shoppingCart.totalAmount())
+// console.log(shoppingCart.totalInCart())
+// shoppingCart.removeItemFromCart(3);
+// shoppingCart.removeItemFromCart(3);
 
-shoppingCart.removeAllItemFromCart(4);
+// shoppingCart.removeAllItemFromCart(4);
 
-shoppingCart.clearCart();
+// shoppingCart.clearCart();
+function main() {
+    
+}
+if(document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        main();
+    })
+} else {
+    main();
+}

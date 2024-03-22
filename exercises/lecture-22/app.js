@@ -55,24 +55,24 @@ let headers = document.querySelectorAll('.container header');
 const classes = ['first', 'second', 'third', 'fourth'];
 console.log(headers)
 for (let i = 0; i < headers.length; i++) {
-    let header = headers[i];
-    let title = header.querySelector('.title');
     switch (i) {
         case 0:
-            title.classList.add(classes[i]);
             break;
         case 1:
-            title.outerHTML = "<h2 class='title " + classes[i] + "' id='" + title.id + "'>" + title.innerHTML + "</h2>";
+            headers[i].innerHTML = "<h2 class='title second'>Second Title</h2>";
             break;
         case 2:
-            title.outerHTML = "<h3 class='title " + classes[i] + "' id='" + title.id + "'>" + title.innerHTML + "</h3>";
+            headers[i].innerHTML = "<h3 class='title third'>Third Title</h3>";
             break;
         case 3:
-            title.outerHTML = "<h4 class='title " + classes[i] + "' id='" + title.id + "'>" + title.innerHTML + "</h4>";
+            const oldId = headers[i].id;
+            const oldClass = headers[i].className;
+            headers[i].outerHTML = "<h4 class='title fourth' id='" + oldId + "' class='" + oldClass + "'>Fourth Title</h4>";
             break;
         default:
             break;
     }
+    headers[i].classList.add(classes[i]);
 }
 
 
