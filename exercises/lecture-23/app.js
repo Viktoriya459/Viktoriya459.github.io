@@ -4,17 +4,30 @@ const alert = document.querySelector('.alert');
 // 1. Знайти на сторінці кнопку з класом btn-primary. Призначте знайденому елементу подію onclick. 
 // Написати функцію обробки події onclick, що додає CSS-клас alert-primary до елемента з id = alert та змінює значення 
 // властивості textContent цього елемента на "A simple primary alert—check it out!".
-
+{let btn = document.querySelector('.btn-primary');
+btn.addEventListener(onclick, function() {
+    let alertElement = document.getElementById('alert');
+    alertElement.classList.add('alert-primary');
+    alertElement.textContent = "A simple primary alert—check it out!";
+});}
 // 2. Знайти на сторінці кнопку з класом btn-secondary. Додати до кнопки прослуховувач події "click". 
 // Написати функцію обробки події click, що додає CSS-клас alert-primary до елемента з id = alert та змінює значення 
 // властивості textContent цього елемента на "A simple secondary alert—check it out!"
-
+{let btn = document.querySelector('.btn-secondary');
+btn.addEventListener('click', function() {
+    let alertElement = document.getElementById('alert');
+    alertElement.classList.add('alert-primary');
+    alertElement.textContent = "A simple secondary alert—check it out!";
+})}
 // 3. Знайти на сторінці кнопку з класом btn-success. Додати до кнопки прослуховувач події "mouseover". 
 // Написати функцію обробки події mouseover, що додає CSS-клас alert-success до елемента з id = alert та змінює 
 // значення властивості textContent цього елемента на "A simple success alert—check it out!"
 // Додати до кнопки прослуховувач події "mouseout". Написати функцію обробки події mouseout, що видаляє CSS-клас 
 // alert-success з елемента alert та змінює значення властивості textContent цього елемента на пустий рядок.
-
+{let btn = document.querySelector('.btn-success');
+btn.addEventListener('mouseover', function() {
+    
+})}
 // 4. Знайти на сторінці кнопку з класом btn-danger. Додати до кнопки прослуховувач події "focus". Написати функцію 
 // обробки події focus, що додає CSS-клас alert-danger до елемента з id = alert та змінює значення властивості 
 // textContent цього елемента на "A simple danger alert—check it out!" Додати до кнопки прослуховувач події "focusout". 
