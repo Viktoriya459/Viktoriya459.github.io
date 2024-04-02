@@ -1,115 +1,198 @@
-// console.dir(document.body)
-// console.dir(document.title)
-
-// console.dir(document.body.childElementCount)
-// console.dir(document.body.firstElementChild)
-// console.dir(document.body.lastElementChild)
-
-// console.dir(document.body.firstChild)
-// console.dir(document.body.childNodes)
-// console.dir(document.body.children)
-
-// for (const child of document.body.children) {
-//     console.dir(child)
-// }
-
-// section
-
-// console.dir(document.getElementById('hero'))
-// const hero = document.getElementById('hero')
-
-// let h1 = hero.querySelector('h1');
-// console.log(h1)
-
-// h1 = hero.getElementsByTagName('h1')
-// console.dir(h1)
-// h1 = hero.getElementsByTagName('h1')
-// console.log(h1[0])
-
-// h1 = hero.getElementsByTagName('h1')
-// console.log(h1[0].innerText)
-
-// h1[0].innerText = "Hello h1"
-
-// h1.innerText = "Hello element h1"
-
-// h1.style.color = "white"
-// h1.style.backgroundColor = "blue" // background-color
-
-// float - cssFloat
-
-// h1.style.cssText = "color:red; font: 600 2.5rem/1.7; padding: 1.5rem 2rem; text-align: center; background-color: gold;"
-
-// hero.innerHTML = "<h1>Hero Section</h1>"
-
-// document.body.innerHTML = "<h1>Hello world</h1>"
-
-// h1.className = "test-css"
-
-// h1.classList.add("test-css", "test-css2")
-// // h1.classList.remove("test-css")
-// h1.classList.toggle("test-css")
-// h1.classList.toggle("test-css")
-
-// let imgs = document.getElementsByClassName('image')
-// console.log(imgs)
-// console.log(imgs[0])
-
-// let imgs1 = document.querySelectorAll('.image img')
-// console.log(imgs1[0])
-
-// imgs1[0].setAttribute('src', '/images/product-5.jpg')
-// imgs1[3].setAttribute('src', '/images/product-4.jpg')
-
 "use strict";
 
-function Product(id, name, price) {
+const currency = (total) => parseFloat(Math.round(total * 100) / 100).toFixed(2);
+
+const compare = (key, order='acs') => (a, b) => {
+    if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) return 0;
+    
+    const A = (typeof a[key] === 'string') ? a[key].toUpperCase() : a[key];
+    const B = (typeof b[key] === 'string') ? b[key].toUpperCase() : b[key];
+
+    let comparison = 0;
+    comparison = (A > B) ? 1 : -1;
+    return (order === 'desc') ? -comparison : comparison;
+}
+
+const findByProps = function(items, props, what) {
+    let founds = [];
+    items.find((item, i) => {
+        if (item[props] === what) {
+            founds.push(items[i]);
+        }            
+    })
+    return founds;
+}
+
+const sortingOrders = [
+    {key:"default", value: "Default sorting"}, 
+    {key:"popularity", value:"Popularity Products"}, 
+    {key:"low-high", value:"Low to High Price"}, 
+    {key:"high-low", value:"High to Low Price"}
+];
+
+function Product(id, name, price, image) {
     this.id = id;
     this.name = name;
     this.price = price;
+    this.image = image;
 }
 
-const currency = total => parseFloat(Math.round(total * 100) / 100).toFixed(2); 
+
+function CardProduct(item) {
+    
+    this.item = item;
+   
+    const detailTemplate = (item) =>  `
+    <div class="detail-container">
+        <div class="col-left">
+            <img src="${item.image}">
+        </div>
+        <div class="col-right">
+            <div class="info-container">
+                <h2 class="info-header">${item.name}</h2>
+
+                <div class="info-price">Price: <span class="price">${item.price}</span></div>
+                <div class="info-shipping">Free shipping</div>
+                
+                <div class="info-button to-cart" data-id="${item.id}">
+                    <a href="#!" class="btn btn-submit add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                </div>
+
+                <h2 class="qty-header py-2">Amount:</h2>     
+                    
+                <div class="qty qty-buttons">
+                    <div class="number-input quantity" data-id="${item.id}">
+                        <button class="btn btn-dec">-</button>
+                        <input class="quantity-result"
+                                        type="number" 
+                                        value="1"
+                                        min="1"
+                                        max="10"
+                                        required 
+                                        />
+                        <button class="btn btn-inc">+</button>
+                    </div>
+                </div>
+
+                <div class="info-description">${item.description}</div>
+                <div class="info-link">
+                <a class="btn-link far fa-heart add-to-wishlist" href="#!" data-id="${item.id}">&nbsp;Add to wish list</a>
+                </div>
+            </div>    
+        
+        </div>
+      </div>
+    `;
+    
+    const showButton = this.item.querySelector(".show-details");
+    const dialog = document.querySelector("dialog");
+    const closeButton = dialog.querySelector("dialog .close");
+    let dialogMain = dialog.querySelector("dialog .dialog-main");
+    
+    
+    showButton.addEventListener("click", event => {
+        let parent = event.target.closest('.product');
+        let id = parent.dataset.id;
+        dialogMain.innerHTML = detailTemplate(productList.getProductById(id))
+        dialog.showModal();
+    });
+    
+    closeButton.addEventListener("click", () => {
+        dialog.close();
+    });
+
+    const addToCartButton = this.item.querySelector('.add-to-cart');
+
+    addToCartButton.addEventListener('click', this);
+    
+    this.handleEvent = function(event) {
+        let parent = event.target.closest('.product');
+        let id = parent.dataset.id;
+        let product = productList.getProductById(id);
+        product = {...product, amount: 1};
+        shoppingCart.addItemToCart(product);
+        // document.getElementById('cart-amount').textContent = shoppingCart.totalAmount();
+    } 
+}
 
 function Cart(tax = 0.07, shipping = 0) {
-   
+    // console.log("Cart constructor", this);
     this.tax = tax;
     this.shipping = shipping;
 
+    const store = new Store();
 
-    let cart = [];
+    let cart = store.init('basket');
 
     this.saveCart = function() {
-        console.log(cart);
+        // console.log(cart);
+        store.set('basket', cart);
+        cartAmount.textContent = shoppingCart.totalAmount();
     }
+
 
     function Item (id, price, amount) {
         this.id = id;
         this.price = price;
         this.amount = amount;
     }
+
+    const cartItemTemplate = (item, product) => `
     
+    <div class="row cart-item" id="id${product.id}">
+        <div class="cell"><img src="${product.image}" alt="${product.name}" height="30"></div>
+        <div class="cell">${product.name}</div>
+        <div class="cell"><span class="product-price price">${product.price}</span></div>
+        <div class="cell">${item.amount}</div>
+        <div class="cell"><span class="product-subtotal price">0</span></div>
+        <div class="cell"><a href="#!" class="fas fa-trash-alt"></a></div>
+    </div>
+    `;
+
+    const findItem = (items, id) => items.find(item => item.id == id);
+    this.populateShoppingCart = (products) => {
+        let result = `
+        <div class="row header">
+                        <div class="cell">Cover</div>
+                        <div class="cell">Product</div>
+                        <div class="cell">Price</div>
+                        <div class="cell">Quantity</div>
+                        <div class="cell">Total</div>
+                        <div class="cell">Action</div>
+        </div>`;
+        cart.forEach(item => result += cartItemTemplate(item, findItem(products, item.id)));
+        return result;
+    }
+
+    this.setCartTotal = function(shoppingCartItems) {
+        let tmpTotal = 0;
+        let subTotal = 0;
+
+        cart.map(item => {
+            let price = shoppingCartItems.querySelector(`#id${item.id} .product-price`).textContent;
+            tmpTotal = +price * item.amount;
+            shoppingCartItems.querySelector(`#id${item.id} .product-subtotal`).textContent = parseFloat(tmpTotal).toFixed(2);
+            subTotal += parseFloat(tmpTotal).toFixed(2);
+
+        });
+
+        document.querySelector('.cart-subtotal').textContent = this.totalInCart();
+        document.querySelector('.cart-tax').textContent = this.tax;
+        document.querySelector('.cart-shipping').textContent = this.shipping;
+        document.querySelector('.cart-total').textContent = (+this.totalInCart() + +this.tax + +this.shipping).toFixed(2);
+    }
+    // 
     this.addItemToCart = function(product) {
 
-        // for (let item in cart) {
-        //     if(cart[item].id === product.id) {
-        //         cart[item].amount += product.amount;
-        //         this.saveCart();
-        //         return;
-        //     }
-        // }
+        let inCart = cart.some(item => item.id === product.id);
 
-        let inCart = cart.some(item => item.id == product.id);
-        console.log(inCart)
-
-        if(inCart) {
-            let index = cart.find(item => item.id == product.id);
+        if (inCart){
+            let index = cart.findIndex(item => item.id === product.id);
             cart[index].amount += product.amount;
-        } else {
+        }else{
             let item = new Item(product.id, product.price, product.amount);
             cart.push(item);
         }
-
         this.saveCart();
     }
 
@@ -168,207 +251,203 @@ function Cart(tax = 0.07, shipping = 0) {
 }
 
 
-
-// let addToCart = productContainer.querySelector('.add-to-cart');
-// let showDetail = productContainer.querySelector('.show-detail');
-// // console.dir(addToCart)
-// addToCart.addEventListener('click', () => {
-//     console.dir(addToCart)
-// })
-// const dialog = document.getElementById('detail');
-// showDetail.addEventListener('click', () => {
-//     // console.dir(showDetail)
-//     dialog.showModal();
-// })
-
-// dialog.querySelector('.close').addEventListener('click', () => {
-//     dialog.close();
-// })
-
-let shoppingCart = new Cart();
-
-function CardProduct(item) {
-    this.item = item;
-
-    let addToCart = this.item.querySelector('.add-to-cart');
-    addToCart.addEventListener('click', function(event) {
-        // console.log(event.target)
-
-        let parent = event.target.closest('.product');
-        let id = parent.dataset.id;
-        let product = productList.getProductById(products, id);
-
-        // let price = parent.querySelector('.product-price').innerText
-        // let name = parent.querySelector('.product-name').innerText
-        // let id = parent.querySelector('.content').getAttribute('id');
-        // console.log(id, price, name)
-
-        // let product = new Product(id, name, price)
-        product = {...product, amount: 1}
-
-        // console.log(product)
-        shoppingCart.addItemToCart(product);
-        document.getElementById('cart-amount').textContent=shoppingCart.totalAmount();
-        
-        // console.log(shoppingCart.totalAmount())
-        // console.log(shoppingCart.totalInCart())
-
-    });
-
-    const showButton = this.item.querySelector(".show-detail");
-    const dialog = document.querySelector("dialog");
-    const closeButton = dialog.querySelector("dialog .close");
-    let dialogMain = dialog.querySelector("dialog .detail-content");
-
-    const detailTemplate = item => `
-    <div class="detail-container">
-            <div class="col-left">
-                <img src="${item.image}">
-            </div>
-            <div class="col-right">
-                <div class="info-container">
-                    <h2 class="info-header">${item.name}</h2>
-    
-                    <div class="info-price">Price: <span class="price">${item.price}</span></div>
-                    <div class="info-shipping">Free shipping</div>
-                    
-                    <div class="info-button to-cart" data-id="1">
-                        <a href="#!" class="btn btn-submit add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</a>
-                    </div>
-    
-                    <h2 class="qty-header py-2">Amount:</h2>     
-                        
-                    <div class="qty qty-buttons">
-                        <div class="number-input quantity" data-id="${item.id}">
-                            <button class="btn btn-dec">-</button>
-                            <input class="quantity-result"
-                                            type="number" 
-                                            value="1"
-                                            min="1"
-                                            max="10"
-                                            required 
-                                            />
-                            <button class="btn btn-inc">+</button>
-                        </div>
-                    </div>
-    
-                    <div class="info-description">${item.description}</div>
-                    <div class="info-link">
-                    <a class="btn-link far fa-heart add-to-wishlist" href="#!" data-id="1">&nbsp;Add to wish list</a>
-                    </div>
-                </div>    
-            
-            </div>
-          </div>
-    `;
-    
-    
-    showButton.addEventListener("click", event => {
-        let parent = event.target.closest('.product');
-        let id = parent.dataset.id;
-        // console.log(id)
-        // console.log(productList.getProductById(+id))
-
-        dialogMain.innerHTML = detailTemplate(productList.getProductById(+id))
-        dialog.showModal();
-    });
-    
-    closeButton.addEventListener("click", () => {
-        dialog.close();
-    });
-
-}
-
-
-// let addToCartButtons = productContainer.querySelectorAll('.add-to-cart');
-
-// for (const item of addToCartButtons) {
-//     item.addEventListener('click', () => {
-//         console.log(item)
-//     })
-// }
-
 const starsTemplate = (n) => Array(n).fill('&starf;').concat(Array(5 - n).fill('&star;')).join('');
 
 function ProductList(products) {
-    this.products = products
-    this.productTemplate = (product) => `
-    <article class="product" data-id="${product.id}">
-        <div class="icons">
-            <a href="#!" class="fas fa-shopping-cart add-to-cart"></a>
-            <a href="#!" class="fas fa-heart add-to-wishlist"></a>
-            <a href="#!" class="fas fa-eye show-detail"></a>
-        </div>
-        <div class="image">
-            <div class="badge bg-${product.badge.bg}">${product.badge.title}</div>
-            <img src="${product.image}" alt="${product.name}">
-        </div>
-        <div class="content" data-id="${product.id}">
-            <h3 class="product-name">${product.name}</h3>
-            <span><span>${starsTemplate(product.stars)}</span><span class="price product-price">${product.price}</span></span>
-        </div>
-                    
-    </article>
-    `;
+    
+    this.products = products;
 
-    this.populateProductList = function(products) {
-        let content = '';
+    this.productTemplate = (product) => `
+        <article class="product" data-id="${product.id}">
+            <div class="icons">
+                <a href="#!" class="fas fa-shopping-cart add-to-cart"></a>
+                <a href="#!" class="fas fa-heart add-to-wishlist"></a>
+                <a href="#!" class="fas fa-eye show-details"></a>
+            </div>
+            <div class="image">
+                <div class="badge bg-${product.badge.bg}">${product.badge.title}</div>
+                <img src="${product.image}" alt="${product.name}">
+            </div>
+            <div class="content" data-id="${product.id}">
+                <h3 class="product-name">${product.name}</h3>
+                <span><span class="price"></span><span class="price product-price">${product.price}</span></span> <span class="starf">${starsTemplate(product.stars)}</span>
+            </div>                    
+        </article>`;
+
+    this.populateProductList = function (products) {
+        let content = "";
         products.forEach(item => content += this.productTemplate(item))
         return content;
     }
 
-    this.getProductById = id => this.products.find(item => item.id === id);
+    this.getProductById = (id) => this.products.find(item => item.id == id);
 }
 
+const liElement = (item) => `<li><a class="category-item" href="#!" data-id="${item.id}">${item.name}</a></li>`;
+
+const ulElement = items => {
+    let ul = document.createElement('ul');
+    ul.setAttribute('class', "list-unstyled categories text-muted");
+
+    let res = '';
+    for (let item of items) {
+        res += liElement(item);
+    }
+    ul.innerHTML = res;
+    return ul;
+}
+
+const distinctSections = items => {
+    let mapped = [...items.map(item => item.section)];
+    let unique = [...new Set(mapped)];
+    return unique;
+}
+
+
+function categoriesCollation(distinct, categories) {
+    let result = [];
+    let i = 0;
+    for (let section of distinct) {
+        result[i] = categories.filter(item => item.section === section);
+        i++;
+    }
+    return result;
+}
+
+let sectionName = section => {
+    let div = document.createElement('div');
+    div.setAttribute('class', 'py-2 px-4 bg-dark text-white mb-1');
+    div.innerHTML = `<strong class="text-uppercase">${section}</strong>`;
+    return div;
+}
+
+const populateCategories = (categoryContainer, categories) => {
+    let distinct = distinctSections(categories);
+    let collation = categoriesCollation(distinct, categories);
+    for (let i=0; i<distinct.length; i++) {
+        categoryContainer.append(sectionName(distinct[i]));
+        categoryContainer.append(ulElement(collation[i]));
+    }
+
+}
+
+
+function renderCategory(productContainer, selector, products) {
+    const categoryItems = document.querySelectorAll(selector);
+
+    categoryItems.forEach(item => item.addEventListener('click', e => {
+        e.preventDefault();
+
+        if (e.target.classList.contains('category-item')) {
+            const category = e.target.dataset.id;
+            const categoryFilter = items => items.filter(item => item.category == category);
+            productContainer.innerHTML = productList.populateProductList(categoryFilter(products));
+        } else {
+            productContainer.innerHTML = productList.populateProductList(products);
+        }
+
+        let productCards = productContainer.querySelectorAll('.product');
+        productCards.forEach(item => new CardProduct(item));
+
+    }))
+}
+
+const sortingOptions = () => sortingOrders.map(item => `<option value="${item.key}">${item.value}</option>`).join('');
+
+function renderSelect(selectPicker, products, productContainer) {
+    selectPicker.innerHTML = sortingOptions();
+
+    selectPicker.addEventListener('change', function() {
+        switch(this.value) {
+            case 'low-high':
+                productContainer.innerHTML = productList.populateProductList(products.sort(compare('price', 'asc')))
+                break;
+            case 'high-low':
+                productContainer.innerHTML = productList.populateProductList(products.sort(compare('price', 'desc')))
+                break;
+            case 'popularity':
+                productContainer.innerHTML = productList.populateProductList(products.sort(compare('stars', 'desc')))
+                break;
+
+            default:
+                productContainer.innerHTML = productList.populateProductList(products.sort(compare('id', 'asc')))
+            
+        }
+        let productCards = productContainer.querySelectorAll('.product');
+        productCards.forEach(item => new CardProduct(item));
+
+    });
+}
+
+
+function Store() {
+
+    this.init = function(key) {
+        if(!this.isset(key)) {
+            this.set(key, []);
+        }
+        return this.get(key);
+    }
+
+    this.isset = function(key) {
+        return this.get(key) !== null;
+    }
+
+    this.get = function(key) {
+        let value = localStorage.getItem(key);
+        return value === null ? null : JSON.parse(value);
+    }
+
+    this.set = function(key, value) {
+        return localStorage.setItem(key, JSON.stringify(value));
+    }
+    
+}
+
+
+let shoppingCart =  new Cart();
 let productList = new ProductList(products);
+const cartAmount = document.getElementById('cart-amount');
 
-
-
+cartAmount.textContent = shoppingCart.totalAmount();
 function main() {
+    // document.cookie = "user=John;path=/;expires=Tue, 10 Jan 2021 03:01.07 GMT;"
+
+    // console.log(document.cookie)
     const productContainer = document.querySelector('.product-container');
-    console.log(products)
-    productContainer.innerHTML = productList.populateProductList(products);
+
+    if (productContainer) {
+
+    productContainer.innerHTML = productList.populateProductList(products);	
 
     let productCards = productContainer.querySelectorAll('.product');
 
     productCards.forEach(item => new CardProduct(item));
 
-    // let products = [];
-    // productCards.forEach(function(item) {
-    //     let id = item.querySelector('.content').getAttribute('id');
-    //     let name = item.querySelector('.product-name').textContent;
-    //     let price = item.querySelector('.product-price').textContent;
-    //     let action = item.querySelector('.badge').textContent;
+    const sidebar = document.getElementById('sidebar');
 
-    //     products = [...products, {id:+id, name:name, price:+price, action:action}];
-    // })
+    if (sidebar) {
+        const categoryContainer = document.getElementById('category-container');
+        populateCategories(categoryContainer, categories);
 
-    // console.log(products)
+        renderCategory(productContainer, '#category-container', products)
 
-    // const findByProps = function(items, props, what) {
-    //     let result = [];
-    //     items.find((item, index) => {
-    //         if (item[props] === what) {
-    //             result.push(items[index]);
-    //         }
-    //     })
-    //     return result;
-    // }
-    // console.log(findByProps(products, "action", 'New'))
+    }
 
-    // const compare = (key, order='asc') => (a, b) => {
-    //     if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) return 0;
-    //     const A = (typeof a[key] === 'string') ? a[key].toUpperCase() : a[key];
-    //     const B = (typeof b[key] === 'string') ? b[key].toUpperCase() : b[key];
+    const selectPicker = document.getElementById('selectpicker');
+    if (selectPicker) {
+        renderSelect(selectPicker, products, productContainer);
+    }
+}
 
-    //     let comparison = 0;
-    //     comparison = (A > B) ? 1 : -1;
-    //     return (order === 'desc') ? -comparison : comparison;
-    // }
+    const cartPage = document.getElementById('cart-page');
+    if(cartPage) {
+        const shippingCartItems = cartPage.querySelector('.cart-main .table');
+        shippingCartItems.innerHTML = shoppingCart.populateShoppingCart(products);
+        shoppingCart.setCartTotal(shippingCartItems);
+    }
 
 
-    // let sorted = products.sort(compare('id', 'desc')) // 'desc'
-    // console.log(sorted)
 }
 
 const template = document.createElement('template');

@@ -12,13 +12,19 @@
 <!-- page header -->
     <header class="header">
         <img src="./favicon.ico" alt="Logo">
- <!-- navigation -->
+ <!-- navigation panel-->
         <nav class="navbar">             
             <a href="index.html" class="fas fa-home"></a>
             <a href="catalog.html">Catalog</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
+        <form name="languages">
+            <input type="radio" name="language" value="US"> US
+            <input type="radio" name="language" value="UA"> UA
+            </form>
+            <button id="btn">Show Selected Language</button>
+            <p id="output"></p>
         <nav>
             <a href="#" class="fas fa-search"></a>
             <a href="#" class="far fa-heart"></a>
