@@ -19,21 +19,19 @@ const form = document.getElementById("registrationForm");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     
-    const username = form.username.value;
-    const email = form.email.value;
-    const password = form.password.value;
+    const {username, email, password} = form.elements;
     const errorMessages = document.getElementById("errorMessages");
 
     errorMessages.innerHTML = "";
 
     // Перевірка імені користувача
-    if (!username) {
+    if (!username.value.trim()) {
         displayError("Ім’я користувача не може бути пустим");
         return;
     }
 
     // Перевірка електронної пошти
-    if (!isValidEmail(email)) {
+    if (!email.value.trim() || !isValidEmail(email.value)) {
         displayError("Невірний формат електронної адреси");
         return;
     }
@@ -56,8 +54,7 @@ function displayError(message) {
 }
 
 function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 function containsUpperCase(str) {
@@ -73,5 +70,5 @@ function containsNumber(str) {
 }
 
 function containsSpecialChar(str) {
-    return /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(str);
+    return /[^\w\s]/.test(str);
 }
