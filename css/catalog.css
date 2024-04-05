@@ -27,7 +27,7 @@ main .container h2 {
             top:1rem;
             right: 1rem;
             z-index: -1;
-            a{
+            a {
                 background-color: #fff;
                 color: var(--anchor-color);
                 

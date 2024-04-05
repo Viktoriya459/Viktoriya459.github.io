@@ -242,8 +242,13 @@ a {
     border: 1px solid hsl(0 0% 70%);
     outline: none;
     cursor: pointer;
-    padding: .3rem 1em;
+    padding: .5rem 1em;
     border-radius: .4em;
+    margin: .2rem;
+    
+}
+.checkout {
+    padding: .5rem 1.6rem;
 }
 
 .btn:hover, .btn:focus {
