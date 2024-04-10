@@ -1,0 +1,295 @@
+{
+"products":[
+   {
+      "id": 1,
+      "badge": {
+         "title": "Sold",
+         "bg": "primary"
+      },
+      "image": "https://couchjanus.github.io/images/product-1.jpg",
+      "name": "Kui Ye Chen’s AirPods",
+      "price": 250,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "stars": 2,
+      "category": 1
+   },
+   {
+      "id": 2,
+      "badge": {
+         "title": "",
+         "bg": ""
+      },
+      "image": "https://couchjanus.github.io/images/product-2.jpg",
+      "name": "Air Jordan 12 gym red",
+      "price": 303,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "stars": 5,
+      "category": 2
+   },
+   {
+      "id": 3,
+      "badge": {
+         "title": "New",
+         "bg": "primary"
+      },
+      "image": "https://couchjanus.github.io/images/product-3.jpg",
+      "name": "Cyan cotton t-shirt",
+      "price": 25,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "stars": 4,
+      "category": 3
+   },
+   {
+      "id": 4,
+      "badge": {
+         "title": "",
+         "bg": ""
+      },
+      "image": "https://couchjanus.github.io/images/product-4.jpg",
+      "name": "Timex Unisex Originals",
+      "price": 151,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "stars": 1,
+      "category": 1
+   },
+   {
+      "id": 5,
+      "badge": {
+         "title": "Sale",
+         "bg": "primary"
+      },
+      "image": "https://couchjanus.github.io/images/product-5.jpg",
+      "name": "Red digital smartwatch",
+      "price": 150,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "stars": 0,
+      "category": 4
+   },
+   {
+      "id": 6,
+      "badge": {
+         "title": "",
+         "bg": ""
+      },
+      "image": "https://couchjanus.github.io/images/product-6.jpg",
+      "name": "Nike air max 95",
+      "price": 311,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "stars": 5,
+      "category": 5
+   },
+   {
+      "id": 7,
+      "badge": {
+         "title": "Sale",
+         "bg": "primary"
+      },
+      "image": "https://couchjanus.github.io/images/product-7.jpg",
+      "name": "Joemalone Women prefume",
+      "price": 35,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "stars": 4,
+      "category": 6
+   },
+   {
+      "id": 8,
+      "badge": {
+         "title": "",
+         "bg": ""
+      },
+      "image": "https://couchjanus.github.io/images/product-8.jpg",
+      "name": "Apple Watch",
+      "price": 425,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "stars": 3,
+      "category": 4
+   },
+   {
+      "id": 9,
+      "badge": {
+         "title": "Sold",
+         "bg": "primary"
+      },
+      "image": "https://couchjanus.github.io/images/product-9.jpg",
+      "name": "Men silver Byron Watch",
+      "price": 551,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "stars": 5,
+      "category": 4
+   },
+   {
+      "id": 10,
+      "badge": {
+         "title": "New",
+         "bg": "primary"
+      },
+      "image": "https://couchjanus.github.io/images/product-10.jpg",
+      "name": "Ploaroid one step camera",
+      "price": 166,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "stars": 0,
+      "category": 1
+   },
+   {
+      "id": 11,
+      "badge": {
+         "title": "Sale",
+         "bg": "primary"
+      },
+      "image": "https://couchjanus.github.io/images/product-11.jpg",
+      "name": "Gray Nike running shoes",
+      "price": 123,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "stars": 5,
+      "category": 5
+   },
+   {
+      "id": 12,
+      "badge": {
+         "title": "New",
+         "bg": "primary"
+      },
+      "image": "https://couchjanus.github.io/images/product-12.jpg",
+      "name": "Black DSLR lense",
+      "price": 100,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "stars": 2,
+      "category": 1
+   }
+],
+
+
+"categories":[
+   {
+      "id": 1,
+      "image": "https://couchjanus.github.io/images/product-1.jpg",
+      "section": "Electronics",
+      "name": "Headphones"
+   },
+   {
+      "id": 2,
+      "name": "Bags",
+      "image": "https://couchjanus.github.io/images/product-2.jpg",
+      "section": "Health & Beauty"
+   },
+   {
+      "id": 3,
+      "image": "https://couchjanus.github.io/images/product-3.jpg",
+      "name": "T-Shirts",
+      "section": "Fashion & Acc"
+   },
+   {
+      "id": 4,
+      "image": "https://couchjanus.github.io/images/product-4.jpg",
+      "name": "Smartwatches",
+      "section": "Electronics"
+   },
+   {
+      "id": 5,
+      "image": "https://couchjanus.github.io/images/product-5.jpg",
+      "name": "Shoes",
+      "section": "Fashion & Acc"
+   },
+   {
+      "id": 6,
+      "image": "https://couchjanus.github.io/images/product-7.jpg",
+      "name": "Parphume",
+      "section": "Health & Beauty"
+   },
+   {
+      "id": 7,
+      "image": "https://couchjanus.github.io/images/product-9.jpg",
+      "name": "Watches",
+      "section": "Health & Beauty"
+   },
+   {
+      "id": 8,
+      "image": "https://couchjanus.github.io/images/product-8.jpg",
+      "name": "Apple Watch",
+      "section": "Electronics"
+   },
+   {
+      "id": 9,
+      "image": "https://couchjanus.github.io/images/product-9.jpg",
+      "name": "Byron Watch",
+      "section": "Health & Beauty"
+   },
+   {
+      "id": 10,
+      "image": "https://couchjanus.github.io/images/product-10.jpg",
+      "name": "Camera",
+      "section": "Electronics"
+   },
+   {
+      "id": 11,
+      "image": "https://couchjanus.github.io/images/product-11.jpg",
+      "name": "Nike shoes",
+      "section": "Fashion & Acc"
+   },
+   {
+      "id": 12,
+      "image": "https://couchjanus.github.io/images/product-12.jpg",
+      "name": "DSLR lense",
+      "section": "Electronics"
+   }
+],
+       "authors": [
+        {
+        "id": "1",
+        "firstName": "John",
+        "lastName": "Doe",
+        "numPosts": 5,
+        "numComments": 24,
+        "numLikes": 59
+        }, 
+        {
+        "id": "2",
+        "firstName": "Sara",
+        "lastName": "Baboo",
+        "numPosts": 15,
+        "numComments": 27,
+        "numLikes": 49
+        }
+    ],
+    "posts": [{
+        "id": "1",
+        "title": "Що таке Lorem Ipsum?",
+        "content": "Lorem Ipsum - це текст-риба, що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною рибою аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів.",
+        "cover":	"https://couchjanus.github.io/images/product-5.jpg",
+        "authorId": 2,
+        "datePublished": 1712002031418,
+        "numComments": 2,
+        "likes": 7
+    }, 
+    {
+        "id": "2",
+        "title": "Чому ми ним користуємось?",
+        "content": "Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад, Тут іде текст. Тут іде текст.",
+        "cover":	"https://couchjanus.github.io/images/product-6.jpg",
+        "authorId": 1,
+        "datePublished": 1712102031418,
+        "numComments": 1,
+        "likes": 14
+    }, 
+    {
+        "id": "3",
+        "title": "Звідки він походить?",
+        "content": "На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер. Він походить з уривку класичної латинської літератури 45 року до н.е., тобто має більш як 2000-річну історію. Річард Макклінток, професор латини з коледжу Хемпдін-Сидні, що у Вірджінії, вивчав одне з найменш зрозумілих латинських слів - consectetur - з уривку Lorem Ipsum, і у пошуку цього слова в класичній літературі знайшов безсумнівне джерело. ",
+        "cover":	"https://couchjanus.github.io/images/product-7.jpg",
+        "authorId": 1,
+        "datePublished": 1712132031418,
+        "numComments": 4,
+        "likes": 7
+    }, 
+    {
+        "id": "4",
+        "title": "Де собі взяти трохи?",
+        "content": "Існує багато варіацій уривків з Lorem Ipsum, але більшість з них зазнала певних змін на кшталт жартівливих вставок або змішування слів, які навіть не виглядають правдоподібно. Якщо ви збираєтесь використовувати Lorem Ipsum, ви маєте упевнитись в тому, що всередині тексту не приховано нічого, що могло б викликати у читача конфуз. ",
+        "cover":	"https://couchjanus.github.io/images/product-8.jpg",
+        "authorId": 2,
+        "datePublished": 1712234031785,
+        "numComments": 4,
+        "likes": 7
+    }
+    ]
+}
