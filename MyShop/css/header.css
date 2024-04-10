@@ -3,3 +3,27 @@
     background-color: rgb(135, 206, 235);
 }
 
+
+.header-social-list li a {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-social-list li a:hover {
+    transform: rotate(360deg);
+}
+
+/* Стилі для світлої теми
+.light-theme {
+    /* Стилі для загального вмісту */
+    /* background-color: #ffffff;
+    color: #000000;
+} */
+
+/* Стилі для темної теми */
+/* .dark-theme { */
+    /* Стилі для загального вмісту */
+    /* background-color: #000000;
+    color: #ffffff;
+} */ 
+

@@ -1,3 +1,4 @@
+// зміна мови
 const btn = document.querySelector("#btn");
 const radioButtons = document.querySelectorAll('input[name="language"]');
 const output = document.getElementById("output");
@@ -10,3 +11,6 @@ btn.addEventListener("click", () => {
     }
 }
 })
+
+
+
