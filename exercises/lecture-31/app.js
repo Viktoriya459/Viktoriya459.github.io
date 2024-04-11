@@ -1,4 +1,5 @@
 // 1. Створити власне сховище db.json, користуючись інструкцією How to на сервері https://my-json-server.typicode.com/
+// працює за посиланням https://my-json-server.typicode.com/Viktoriya459/db/
 
 // 2. Маємо код, що будує стрічку публікацій та поміщає отриманий результат всередину елемента з id="blog".
 // Продовжити ланцюжок промісив, використовуючи метод then, де потрібно звернутись до сервера 
@@ -43,21 +44,15 @@ xhrPromise("GET", url)
         result += template(item)
     })
     document.getElementById("blog").innerHTML = result;
-    return posts;
+
 })
-.then(posts => {
-  const authorElements = document.querySelectorAll('.author');
-  const promises = posts.map(post => {
-      const userId = post.userId;
-      return xhrPromise("GET", `https://jsonplaceholder.typicode.com/users/${userId}`);
-  });
-  return Promise.all(promises);
+.then(() => {
+  const users = document.querySelectorAll('.author')
+  users.forEach(user => {
+      xhrPromise('GET', `https://jsonplaceholder.typicode.com/users/${user.dataset.id}`)
+      .then(response => {
+          let userName = JSON.parse(response)
+          user.textContent = userName.name
+      })
+  })
 })
-.then(responses => {
-  responses.forEach((response, index) => {
-      const userData = JSON.parse(response);
-      const authorElement = document.querySelectorAll('.author')[index];
-      authorElement.textContent = userData.name;
-  });
-})
-.catch(error => console.error('Error fetching data:', error));
