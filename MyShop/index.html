@@ -10,88 +10,125 @@
 </head>
 <body>
 <!-- page header -->
-    <header class="header">
-        <img src="./favicon.ico" alt="Logo">
+<header class="header">
+    <img src="./images/2.jpg" class="banner-image">
 
- <!-- navigation panel-->
-        <nav class="navbar">             
-            <a href="index.html" class="fas fa-home"></a>
-            <a href="catalog.html">Catalog</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <form id="search-form">
-            <input type="text" id="search-input" placeholder="Search...">
-            <button type="submit">Search</button>
-        </form>
-        <form name="languages">
-            <input type="radio" name="language" value="US"> US
-            <input type="radio" name="language" value="UA"> UA
-            </form>
-            <button id="btn">Show Selected Language</button>
-            <p id="output"></p>
-        <nav>
-            <a href="#" class="fas fa-search"></a>
-            <a href="#" class="far fa-heart"></a>
-            <a href="cart.html" class="fas fa-dolly"></a>
-            <a href="#!" class="fas fa-user"></a>
-        </nav>
-        <div class="sign-up">
-            <h3>Особистий кабінет</h3>
-            <a href="registration.html" class="btn">Go to Registration</a>
-</div>
+    <!-- navigation panel-->
+    <div class="sign-up">
+        <a href="registration.html" class="fas fa-user"> Особистий кабінет</a>
+    </div>
+    <form id="search-form">
+        <input type="text" id="search-input" placeholder="Пошук..">
+        <a href="#" class="fas fa-search"></a>
+    </form>
+    <nav class="navbar" style="position: absolute; top: 10px; right: 190px;">
+        <a href="#" class="far fa-heart"></a>
+        <a href="cart.html" class="fas fa-dolly"></a>
+    </nav>
+    <nav class="navbar" style="position: absolute; top: 10px; left: 20px;">             
+        <a href="index.html" class="fas fa-home"></a>
+        <a href="catalog.html">Каталог</a>
+        <a href="about.html">Про нас</a>
+        <a href="contact.html">Контакти</a>
+        <a href="/index.html">Classwork</a>   
+    </nav>
 
-        <ul class="header-social-list">
-            <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
-        </ul>
-    </header>
+
+    <ul class="header-social-list">
+        <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://linkedin.com.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+    </ul>
+</header>
 
 <!-- hero -->
-    <!-- <section id="hero" class="hero">
-        <div class="container">
-            <p>New Inspiration 2024</p>
-            <h1>Extra 15% off Sitewide</h1> 
-            <a href="#!" class="btn">Sale Collection</a>
+<section class="py-5">
+    <div class="container">
+        <header class="text-center">
+            <h2>Категорії</h2>
+        </header>
+        <div class="carousel">
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide carousel-item">
+                        <a class="category-item" href="#!">
+                            <img src="./images/accessories.jpg" alt="text" height="100">
+                            <strong class="category-item-title">Аксесуари</strong>
+                        </a>
+                    </div>
+                    <div class="slide carousel-item">
+                        <a class="category-item" href="#!">
+                            <img src="./images/clothes.jpg" alt="text" height="100">
+                            <strong class="category-item-title">Одяг</strong>
+                        </a>
+                    </div>
+                    <div class="slide carousel-item">
+                        <a class="category-item" href="#!">
+                            <img src="./images/goods-for-childroom.jpg" alt="text" height="100">
+                            <strong class="category-item-title">Речі для дитячої кімнати</strong>
+                        </a>
+                    </div>
+                    <div class="slide carousel-item">
+                        <a class="category-item" href="#!">
+                            <img src="./images/shoes.jpg" alt="text" height="100">
+                            <strong class="category-item-title">Взуття</strong>
+                        </a>
+                    </div>
+                    <div class="slide carousel-item">
+                        <a class="category-item" href="#!">
+                            <img src="./images/toys.jpg" alt="text" height="100">
+                            <strong class="category-item-title">Іграшки</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section> -->
+    </div>
+</section>
 
 <!-- main content -->
 <main>
-    <article>
+    <!-- <article>
         <section>
             <h3>Most Popular Collections</h3>
             <a href="#!" class="btn">Popular Collections</a>
         </section>
-    </article>
+    </article> -->
 
     <section class="categories">
-        <h3>Categories</h3>
+        <h3>Популярні товари</h3>
         <div class="image">
-            <li><img src="" alt="Picture for category1" height="200"></li>
-            <li><img src="" alt="Picture for category2" height="200"></li>
-            <li><img src="" alt="Picture for category3" height="200"></li>
-            <li><img src="" alt="Picture for category4" height="200"></li>
-            <li><img src="" alt="Picture for category5" height="200"></li>
+            <li><a href="#"><img src="./images/toys.jpg" alt="toys" height="200">Іграшки</a></li>
+            <li><a href="#"><img src="./images/clothes.jpg" alt="clothes" height="200">Одяг</a></li>
+            <li><a href="#"><img src="./images/shoes.jpg" alt="shoes" height="200">Взуття</a></li>
+            <li><a href="#"><img src="./images/accessories.jpg" alt="accessories" height="200">Аксесуари</a></li>
+            <li><a href="#"><img src="./images/goods-for-childroom.jpg" alt="goods-for-childroom" height="200">Речі для дитячої кімнати</a></li>
         </div>
     </section>
+               <!-- divider -->
+            <section>
+                <div class="icons">
+                    <a href="" class="fas fa-shopping-cart"></a>
+                    <a href="" class="fas fa-heart"></a>
+                    <a href="" class="fas fa-eye"></a>
+                </div>
+            </section>
 </main>
 
 <!-- footer -->
 <footer class="footer">
-    <section>
+    <img src="./images/2.jpg" class="footer-image">
+    <section class="footer-section">
         <!-- services -->
         <div>
-            <h3>Customer service</h3>
+            <h3>ІНФОРМАЦІЯ</h3>
             <ul>
-                <li><a href="">My Account</a></li>
-                <li><a href="">Shipping</a></li>
-                <li><a href="">FAQ</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li><a href="">Умови оплати та доставки</a></li>
+                <li><a href="">Повернення товару</a></li>
+                <li><a href="">Гарантійні зобов’язання</a></li>
             </ul>
         </div>    
 
@@ -104,29 +141,20 @@
         </div>
 
         <div>
-            <h3>Shop</h3>
+            <h3>КОМУНІКАЦІЯ</h3>
             <ul>
-                <li><a href="">Brands</a></li>
-                <li><a href="">Collections</a></li>
-                <li><a href="">New</a></li>
-                <li><a href="">Sale</a></li>
+                <li><a href="tel:+380123456789"><i class="fas fa-phone"></i> +38 (012) 345-67-89</a></li>
+                <li><a href="mailto:example@gmail.com"><i class="far fa-envelope"></i> example@gmail.com</a></li>
+                <li><a href="#"><i class="fab fa-viber"></i> Viber</a></li>
+                <li><a href="#"><i class="fab fa-telegram"></i> Telegram</a></li>
             </ul>
         </div>
 
-        <div>
-            <h3>Legal</h3>
-            <ul>
-                <li>
-                    <a href="">Terms of Service</a>
-                    <a href="">Accessibility</a>
-                    <a href="">Privacy Policy</a>
-                </li>
-            </ul>
-        </div>
-    </section>
         <div class="footer-ligal">
-                &copy; 2024 All Rights Reserved
+            &copy; 2024 All Rights Reserved
         </div> 
+    </section>
+
 </footer>
 <script src="./js/app.js"></script>
 </body>

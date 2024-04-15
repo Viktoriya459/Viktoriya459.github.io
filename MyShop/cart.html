@@ -10,50 +10,38 @@
 </head>
 <body>
 <!-- page header -->
-    <header class="header">
-        <img src="./favicon.ico" alt="Logo">
-        <!-- <div class="theme-switcher">
-            <button id="light-theme-btn"><i class="fas fa-sun"></i></button>
-            <button id="dark-theme-btn"><i class="fas fa-moon"></i></button>
-        </div> -->
-        
- <!-- navigation panel-->
-        <nav class="navbar">             
-            <a href="index.html" class="fas fa-home"></a>
-            <a href="catalog.html">Catalog</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <form id="search-form">
-            <input type="text" id="search-input" placeholder="Search...">
-            <button type="submit">Search</button>
-        </form>
-        <form name="languages">
-            <input type="radio" name="language" value="US"> US
-            <input type="radio" name="language" value="UA"> UA
-            </form>
-            <button id="btn">Show Selected Language</button>
-            <p id="output"></p>
-        <nav>
-            <a href="#" class="fas fa-search"></a>
-            <a href="#" class="far fa-heart"></a>
-            <a href="cart.html" class="fas fa-dolly"></a>
-            <a href="#!" class="fas fa-user"></a>
-        </nav>
-        <div class="sign-up">
-            <h3>Особистий кабінет</h3>
-            <a href="registration.html" class="btn">Go to Registration</a>
-</div>
+<header class="header" style="position: relative; text-align: center;">
+    <img src="./images/2.jpg" style="width: 100%; height: auto; max-height: 200px;">
 
-        <ul class="header-social-list">
-            <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
-        </ul>
-    </header>
+    <!-- navigation panel-->
+    <div class="sign-up" style="position: absolute; top: 10px; right: 20px;">
+        <a href="registration.html" class="fas fa-user"> Особистий кабінет</a>
+    </div>
+    <nav class="navbar" style="position: absolute; top: 10px; right: 190px;">
+        <a href="#" class="far fa-heart"></a>
+        <a href="cart.html" class="fas fa-dolly"></a>
+        
+    </nav>
+    <nav class="navbar" style="position: absolute; top: 10px; left: 20px;">             
+        <a href="index.html" class="fas fa-home"></a>
+        <a href="catalog.html">Каталог</a>
+        <a href="about.html">Про нас</a>
+        <a href="contact.html">Контакти</a>
+    </nav>
+    <form id="search-form" style="position: absolute; top: 10px; left: 900px;">
+        <input type="text" id="search-input" placeholder="Пошук..">
+        <a href="#" class="fas fa-search"></a>
+    </form>
+
+    <ul class="header-social-list" style="position: absolute; bottom: 40px; right: 20px; font-size: 24px;">
+        <li style="display: inline-block; margin-right: 10px;"><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+        <li style="display: inline-block; margin-right: 10px;"><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        <li style="display: inline-block; margin-right: 10px;"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        <li style="display: inline-block; margin-right: 10px;"><a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a></li>
+        <li style="display: inline-block; margin-right: 10px;"><a href="https://linkedin.com.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        <li style="display: inline-block;"><a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+    </ul>
+</header>
 
 <!-- hero -->
     <!-- <section id="hero" class="hero">
@@ -67,20 +55,20 @@
 
 
 <!-- footer -->
-<footer class="footer light-theme">
-    <section>
+<footer class="footer" style="position: relative;">
+    <img src="./images/2.jpg" style="width: 100%; height: auto; max-height: 200px;">
+    <section style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; display: flex; justify-content: space-around; flex-wrap: wrap; width: 80%;">
         <!-- services -->
-        <div>
-            <h3>Customer service</h3>
+        <div style="flex: 1; margin-right: 20px;">
+            <h3>ІНФОРМАЦІЯ</h3>
             <ul>
-                <li><a href="">My Account</a></li>
-                <li><a href="">Shipping</a></li>
-                <li><a href="">FAQ</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li><a href="">Умови оплати та доставки</a></li>
+                <li><a href="">Повернення товару</a></li>
+                <li><a href="">Гарантійні зобов’язання</a></li>
             </ul>
         </div>    
 
-        <div>
+        <div style="flex: 1; margin-right: 20px;">
             <h3>ГРАФІК РОБОТИ</h3>
             <ul>
                 <li>Понеділок — П‘ятниця / 10:00-19:00</li>
@@ -88,30 +76,21 @@
             </ul>
         </div>
 
-        <div>
-            <h3>Shop</h3>
+        <div style="flex: 1; margin-right: 20px;">
+            <h3>КОМУНІКАЦІЯ</h3>
             <ul>
-                <li><a href="">Brands</a></li>
-                <li><a href="">Collections</a></li>
-                <li><a href="">New</a></li>
-                <li><a href="">Sale</a></li>
+                <li><a href="tel:+380123456789"><i class="fas fa-phone"></i> +38 (012) 345-67-89</a></li>
+                <li><a href="mailto:example@gmail.com"><i class="far fa-envelope"></i> example@gmail.com</a></li>
+                <li><a href="#"><i class="fab fa-viber"></i> Viber</a></li>
+                <li><a href="#"><i class="fab fa-telegram"></i> Telegram</a></li>
             </ul>
         </div>
 
-        <div>
-            <h3>Legal</h3>
-            <ul>
-                <li>
-                    <a href="">Terms of Service</a>
-                    <a href="">Accessibility</a>
-                    <a href="">Privacy Policy</a>
-                </li>
-            </ul>
-        </div>
-    </section>
-        <div class="footer-ligal">
-                &copy; 2024 All Rights Reserved
+        <div class="footer-ligal" style="position: absolute; bottom: -1rem; left: 50%; transform: translateX(-50%); text-align: center;">
+            &copy; 2024 All Rights Reserved
         </div> 
+    </section>
+
 </footer>
 <script src="./js/app.js"></script>
 </body>

@@ -1,9 +1,25 @@
 .header {
     color: var(--anchor-color);
-    background-color: rgb(135, 206, 235);
+    position: relative; 
+    text-align: center;
+}
+.banner-image {
+    width: 100%; 
+    height: auto; 
+    max-height: 150px;
 }
 
+.header-social-list {
+    position: absolute; 
+    bottom: 40px; 
+    right: 20px; 
+    font-size: 24px;
 
+}
+li {
+    display: inline-block;
+    margin-right: 10px;
+}
 .header-social-list li a {
     display: inline-block;
     transition: transform 0.3s ease-in-out;
@@ -13,17 +29,18 @@
     transform: rotate(360deg);
 }
 
-/* Стилі для світлої теми
-.light-theme {
-    /* Стилі для загального вмісту */
-    /* background-color: #ffffff;
-    color: #000000;
-} */
+.sign-up {
+    position: absolute; 
+    top: 10px; 
+    right: 20px;
+}
 
-/* Стилі для темної теми */
-/* .dark-theme { */
-    /* Стилі для загального вмісту */
-    /* background-color: #000000;
-    color: #ffffff;
-} */ 
+.navbar {
+    
+}
 
+#search-form {
+    position: absolute; 
+    top: 10px; 
+    left: 900px;
+}

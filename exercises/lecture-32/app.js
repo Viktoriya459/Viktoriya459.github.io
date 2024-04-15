@@ -19,7 +19,6 @@ const fetchData = async (url) => {
     return data;
   } catch (error) {
     console.error('Something went wrong!', error);
-    return null;
   }
 };
 
@@ -30,21 +29,13 @@ fetchData(url)
       result += template(item);
     });
     document.getElementById("blog").innerHTML = result;
-  })
-  .then(async () => {
+
     const users = document.querySelectorAll('.author');
-    for (const user of users) {
-      try {
-        const response = await fetch(`https://jsonplaceholder.typicode.com/users/${user.dataset.id}`);
-        if (!response.ok) {
-          throw new Error('Error');
-        }
-        const userData = await response.json();
-        user.textContent = userData.name;
-      } catch (error) {
-        console.error('Something went wrong!', error);
-      }
-    }
+    users.forEach(async user => {
+      const response = await fetch(`https://jsonplaceholder.typicode.com/users/${user.dataset.id}`);
+      const userData = await response.json();
+      user.textContent = userData.name;
+    });
   });
 
 // const xhrPromise = (method, url) => {
