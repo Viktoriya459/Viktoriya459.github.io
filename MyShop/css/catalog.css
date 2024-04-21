@@ -1,0 +1,45 @@
+.catalog {
+    .image {
+        a:hover {
+            color: var(--anchor-active-color);
+            text-decoration: underline;
+        }
+    }
+    .content {
+
+        .price {
+            font-weight: 600;
+            color:var(--anchor-active-color);
+        }
+        > .price::after {
+            color:var(--anchor-color);
+            content:var(--currency-symbol);
+        }
+    }
+    .icons {
+        > a {
+
+        }
+        > a:hover {
+            color:var(--anchor-active-color);
+            text-decoration: underline;
+        }
+    }
+}
+
+ul.categories a:hover {
+    color: var(--anchor-active-color);
+    text-decoration: underline;
+}
+ul.categories li:nth-child(even) {
+    background-color: lightgrey;
+}
+
+aside {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+.sidebar-wrapper {
+    border: 1px solid #ddd;
+}

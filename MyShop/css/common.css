@@ -1,4 +1,5 @@
- *, 
+@import url(https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css);
+*, 
 *::before,
 *::after {
     margin: 0;
@@ -6,23 +7,115 @@
 }
 
  :root {
-    --primary-text-color: rgb(7, 7, 90);
-    --primary-bg-color: rgba(255, 253, 253, 0.952);
-    --anchor-color: #000000;
-    --anchor-active-color: rgb(70, 61, 70);
-
+    --primary-bg-color: rgb(242, 243, 228);
+    --anchor-color: rgb(70 61 70);
+    --anchor-active-color: rgb(97, 12, 97);
+    --currency-symbol: "\20B4";
 }
 
-/* 
 body {
-    color: var(--primary-text-color);
+    color: var(--anchor-color);
     background-color: var(--primary-bg-color);
+    font-family: "Open Sans", sans-serif;
+    font-size: .875rem / 1.3;
 }
-
 a {
-    color:var(--anchor-color);
+    color: var(--anchor-color);
+    text-decoration: none;
+    
+}
+li {
+    display: inline-block;
+    margin-right: 10px;
+}
+h3, h2 {
+    text-align: center;
 }
 
-h1, h2, h3 {
-    font-weight: 700;
-}   */
+/* padding */
+
+.py-0 {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+.py-1 {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+}
+
+.py-2 {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.py-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.py-4 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.px-0 {
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+
+.px-1 {
+    padding-left: .25rem;
+    padding-right: .25rem;
+}
+
+.px-2 {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.px-3 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.px-4 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.px-5 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+/* margin */
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-1 {
+    margin-bottom: .25rem;
+}
+
+.mb-2 {
+    margin-bottom: .5rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}

@@ -1,46 +1,82 @@
 .header {
-    color: var(--anchor-color);
+    /* color: var(--anchor-color); */
     position: relative; 
     text-align: center;
-}
-.banner-image {
-    width: 100%; 
-    height: auto; 
-    max-height: 150px;
-}
-
-.header-social-list {
-    position: absolute; 
-    bottom: 40px; 
-    right: 20px; 
-    font-size: 24px;
-
-}
-li {
-    display: inline-block;
-    margin-right: 10px;
-}
-.header-social-list li a {
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
-}
-
-.header-social-list li a:hover {
-    transform: rotate(360deg);
-}
-
-.sign-up {
-    position: absolute; 
-    top: 10px; 
-    right: 20px;
-}
-
-.navbar {
+    font-weight: 500;
     
+    > .banner-image {
+        width: 100%; 
+        height: auto; 
+        max-height: 150px; 
+
+    }
+    .navbar {
+        position: absolute; 
+        top: 10px; 
+        left: 20px;
+        > a {
+            font-size: 1.1rem;
+            display: inline-block;
+            padding: 10px 20px;
+        }
+        > a:hover{
+            color: var(--anchor-active-color);
+            text-decoration: underline;
+        }
+    }
+    .toolbar {
+        position: absolute; 
+        top: 10px; 
+        right: 190px;
+        > a {
+            font-size: 1.1rem;
+        }
+        > a:hover{
+            color: var(--anchor-active-color);
+            text-decoration: underline;
+        }
+    }
+    .sign-up {
+        position: absolute; 
+        top: 10px; 
+        right: 20px;
+        font-size: 1rem;
+        > a:hover{
+            color: var(--anchor-active-color);
+            text-decoration: underline;
+        }
+    }
+    #search-form {
+        position: absolute; 
+        top: 10px; 
+        left: 600px;
+        font-size: 1.1rem;
+    }
+    .header-social-list {
+        position: absolute; 
+        bottom: 40px; 
+        right: 20px; 
+        font-size: 2rem;
+        > li a {
+            display: inline-block;
+            transition: transform 0.3s ease-in-out;
+            
+        }
+        > li a:hover {
+            transform: rotate(360deg);
+            color: var(--anchor-active-color);
+        }
+    }    
 }
 
-#search-form {
-    position: absolute; 
-    top: 10px; 
-    left: 900px;
-}
+
+
+
+
+
+
+
+
+
+
+

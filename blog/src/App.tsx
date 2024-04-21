@@ -2,17 +2,18 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
-import Hello, {formatDate, Calc} from './components/Hello';
+// import Hello, {Calc} from './components/Hello';
+// import Post from './components/Post';
+import Blog from './components/Blog';
 
 // function Welcome() {
 //   return <h1>Hello component</h1>;
 // }
 
-function Welcome(props) {
-  // props.name = "bla bla"
-  return <h1>Hello, {props.name}</h1>;
-}
+// function Welcome(props) {
+//   // props.name = "bla bla"
+//   return <h1>Hello, {props.name}</h1>;
+// }
 
 // function formatDate(date) {
 //   return new Intl.DateTimeFormat(
@@ -34,10 +35,10 @@ function Welcome(props) {
 //   )
 // }
 
-function Header(props) {
-  console.log(props)
-  return <h1>Hello component</h1>;
-}
+// function Header(props) {
+//   console.log(props)
+//   return <h1>Hello component</h1>;
+// }
 
 // const jsxEl = <h1>I am a JSX element</h1>;
 
@@ -63,6 +64,15 @@ function Header(props) {
 function App() {
   const [count, setCount] = useState(0);
   const today = new Date()
+
+  const post = {
+    "id": "1",
+    "firstName": "John",
+    "lastName": "Doe",
+    "numPosts": 5,
+    "numComments": 24,
+    "numLikes": 59
+  }
   return (
     <>
       <div>
@@ -78,9 +88,9 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
+        {/* <p>
           Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        </p> */}
       </div>
 
       {/* {jsxEl}
@@ -88,7 +98,7 @@ function App() {
       {Header} */}
 
       {/* <Welcome></Welcome> */}
-      <Welcome name="world" />
+      {/* <Welcome name="world" />
 
       <Welcome name="me" />
       <Welcome name="component" />
@@ -100,8 +110,9 @@ function App() {
       <Header />
 
       <Hello name="Hello component" />
-      <h3 style={{ backgroundColor:'blue', color:'gold'}}>It's today: {today.toLocaleDateString()}</h3>
-
+      <h3 style={{ backgroundColor:'blue', color:'gold'}}>It's today: {today.toLocaleDateString()}</h3> */}
+      {/* <Post post={post} /> */}
+      <Blog />
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>

@@ -1,7 +1,7 @@
 // src/components/Blog.tsx
 
-
-export default function Blog({ post }) {
+const Blog = (props) => {
+  const { post } = props;
     return (
         <article className='post'>
             <div className='cover-container'>
@@ -14,8 +14,12 @@ export default function Blog({ post }) {
         </article>
     );
 }
+export default Blog;
 
 
+// src/components/Blog.tsx
+
+// import React from "react"; 
 
 // class Blog extends React.Component {
 
@@ -39,4 +43,8 @@ export default function Blog({ post }) {
 //     }
 // }
 // export default Blog;
+
+
+
+
 
