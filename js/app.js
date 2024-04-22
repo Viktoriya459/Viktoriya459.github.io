@@ -27,9 +27,9 @@ const findByProps = function(items, props, what) {
 
 const sortingOrders = [
     {key:"default", value: "Default sorting"}, 
-    {key:"popularity", value:"Popularity Products"}, 
-    {key:"low-high", value:"Low to High Price"}, 
-    {key:"high-low", value:"High to Low Price"}
+    {key:"популярні", value:"популярні товари"}, 
+    {key:"нижче-вище", value:"від меншої ціни"}, 
+    {key:"вище-нижче", value:"від більшої ціни"}
 ];
 
 function Product(id, name, price, image) {
