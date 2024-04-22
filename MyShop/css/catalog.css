@@ -1,7 +1,8 @@
 .catalog {
     position: relative;
-
-    .image {
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); */
+    & .image {
         object-fit: cover;
         .badge {
             display: inline-block;
@@ -16,6 +17,8 @@
         width: 11.5rem;
         overflow: hidden;
         & h2 {
+            text-align: center;
+            display: inline-block;
             color:black;
             position: absolute;
             bottom: 1.8rem;
@@ -41,7 +44,7 @@
     }
     .icons {
         position: absolute;
-        top: 2.5rem;
+        top: .7rem;
         left: 1.3rem;
         & a {
             display: inline-block;

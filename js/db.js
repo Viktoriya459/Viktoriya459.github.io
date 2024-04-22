@@ -5,8 +5,8 @@ let products = [
 			title: "Sold",
 			bg: "sold"	
 		},
-		image: "/images/product-1.jpg",
-		name: "Kui Ye Chen`s AirPods",
+		image: "/images/toys.jpg",
+		name: "Іграшка",
 		price: 21,
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
 		stars: 2,
@@ -19,8 +19,8 @@ let products = [
 			title: "",
 			bg: ""	
 		},
-		image: "/images/product-2.jpg",
-		name: "Apple wireless keyboard",
+		image: "/images/shoes.jpg",
+		name: "Взуття",
 		price: 30,
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
 		stars: 5,
@@ -32,8 +32,8 @@ let products = [
 			title: "New",
 			bg: "new"	
 		},
-		image: "/images/product-3.jpg",
-		name: "Cyan cotton t-shirt",
+		image: "/images/goods-for-childroom.jpg",
+		name: "Для кімнати",
 		price: 5,
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
 		stars: 4,
@@ -45,8 +45,8 @@ let products = [
 			title: "",
 			bg: ""	
 		},
-		image: "/images/product-4.jpg",
-		name: "Timex Unisex Originals",
+		image: "/images/clothes.jpg",
+		name: "Одяг",
 		price: 51,
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
 		stars: 1,
@@ -58,8 +58,8 @@ let products = [
 			title: "Sale",
 			bg: "sale"	
 		},
-		image: "/images/product-5.jpg",
-		name: "Red digital smartwatch",
+		image: "/images/accessories.jpg",
+		name: "Аксесуари",
 		price: 10,
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
 		stars: 0,
@@ -72,8 +72,8 @@ let products = [
 			title: "",
 			bg: ""	
 		},
-		image: "/images/product-6.jpg",
-		name: "Nike air max 95",
+		image: "/images/clothes.jpg",
+		name: "Одяг",
 		price: 31,
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
 		stars: 5,
@@ -85,8 +85,8 @@ let products = [
 			title: "Sale",
 			bg: "sale"
 		},
-		image: "/images/product-7.jpg",
-		name: "Joemalone Women perfume",
+		image: "/images/shoes.jpg",
+		name: "Взуття",
 		price: 35,
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
 		stars: 4,
@@ -99,8 +99,8 @@ let products = [
 			title: "",
 			bg: ""	
 		},
-		image: "/images/product-8.jpg",
-		name: "Apple Watch",
+		image: "/images/toys.jpg",
+		name: "Іграшка",
 		price: 25,
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
 		stars: 3,
@@ -113,8 +113,8 @@ let products = [
 			title: "Sold",
 			bg: "sold"	
 		},
-		image: "/images/product-9.jpg",
-		name: "Black Canon EOS camera",
+		image: "/images/goods-for-childroom.jpg",
+		name: "Для кімнати",
 		price: 24,
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
 		stars: 5,
@@ -127,8 +127,8 @@ let products = [
 			title: "New",
 			bg: "new"	
 		},
-		image: "/images/product-10.jpg",
-		name: "Silver black round Ipod",
+		image: "/images/accessories.jpg",
+		name: "Аксесуари",
 		price: 16,
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
 		stars: 0,
@@ -140,8 +140,8 @@ let products = [
 			title: "Sale",
 			bg: "sale"	
 		},
-		image: "/images/product-11.jpg",
-		name: "Digital smartwatch",
+		image: "/images/shoes.jpg",
+		name: "Взуття",
 		price: 13,
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
 		stars: 5,
@@ -154,8 +154,8 @@ let products = [
 			title: "New",
 			bg: "new"	
 		},
-		image: "/images/product-12.jpg",
-		name: "Black camera lens",
+		image: "/images/clothes.jpg",
+		name: "Одяг",
 		price: 11,
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper leo, eget euismod orci. Cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Vestibulum ultricies aliquam convallis.",
 		stars: 2,
@@ -169,80 +169,80 @@ let products = [
 let categories = [
 	{
 		id: 1,
-		image: "https://couchjanus.github.io/images/product-1.jpg",
-		section: "Electronics",
-		name: "Headphones"
+		image: "https://Viktoriya459.github.io/images/accessories.jpg",
+		section: "Аксесуари",
+		name: "Аксесуари"
 	},
 	{
     id: 2,
-		name: "Bags",
-		image: "https://couchjanus.github.io/images/product-2.jpg",
-		section: "Health & Beauty",
+		name: "Одяг",
+		image: "https://Viktoriya459.github.io/images/clothes.jpg",
+		section: "Одяг",
 	},
 	{
 		id: 3,
-		image: "https://couchjanus.github.io/images/product-3.jpg",
-		name: "T-Shirts",
-		section: "Fashion & Acc"
+		image: "https://Viktoriya459.github.io/images/shoes.jpg",
+		name: "Взуття",
+		section: "Взуття"
 	},
 	{
 		id: 4,
-		image: "https://couchjanus.github.io/images/product-4.jpg",
-		name: "Smartwatches",
-		section: "Electronics"
+		image: "https://Viktoriya459.github.io/images/goods-for-childroom.jpg",
+		name: "Для кімнати",
+		section: "Для кімнати"
 	},
 	{
 		id: 5,
-		image: "https://couchjanus.github.io/images/product-5.jpg",
-		name: "Shoes",
-		section: "Fashion & Acc"
+		image: "https://Viktoriya459.github.io/images/toys.jpg",
+		name: "Іграшки",
+		section: "Іграшки"
 	},
 
 	{
 		id: 6,
-		image: "https://couchjanus.github.io/images/product-7.jpg",
-		name: "Parphume",
-		section: "Health & Beauty"
+		image: "https://Viktoriya459.github.io/images/toys.jpg",
+		name: "Іграшки",
+		section: "Іграшки"
 	},
 	{
 		id: 7,
-		image: "https://couchjanus.github.io/images/product-9.jpg",
-		name: "Watches",
-		section: "Health & Beauty",
+		image: "https://Viktoriya459.github.io/images/goods-for-childroom.jpg",
+		name: "Для кімнати",
+		section: "Для кімнати"
 	},
 
 	{
 		id: 8,
-		image: "https://couchjanus.github.io/images/product-8.jpg",
-		name: "Apple Watch",
-		section: "Electronics"
+		image: "https://Viktoriya459.github.io/images/shoes.jpg",
+		name: "Взуття",
+		section: "Взуття"
 	},
                       
 	{
 		id: 9,
-		image: "https://couchjanus.github.io/images/product-9.jpg",
-		name: "Byron Watch",
-		section: "Health & Beauty"
+		image: "https://Viktoriya459.github.io/images/accessories.jpg",
+		section: "Аксесуари",
+		name: "Аксесуари"
 	},
                    
 	{
 		id: 10,
-		image: "https://couchjanus.github.io/images/product-10.jpg",
-		name: "Camera",
-		section: "Electronics"
+		image: "https://Viktoriya459.github.io/images/toys.jpg",
+		name: "Іграшки",
+		section: "Іграшки"
 	},
 	{
 		id: 11,
-		image: "https://couchjanus.github.io/images/product-11.jpg",
-		name: "Nike shoes",
-		section: "Fashion & Acc"
+		name: "Одяг",
+		image: "https://Viktoriya459.github.io/images/clothes.jpg",
+		section: "Одяг",
 	},
 
 	{
 		id: 12,
-		image: "https://couchjanus.github.io/images/product-12.jpg",
-		name: "DSLR lense",
-		section: "Electronics"
+		image: "https://Viktoriya459.github.io/images/goods-for-childroom.jpg",
+		name: "Для кімнати",
+		section: "Для кімнати"
 	},
 
 ];

@@ -53,14 +53,14 @@ function CardProduct(productList, item) {
             <div class="info-container">
                 <h2 class="info-header">${item.name}</h2>
 
-                <div class="info-price">Price: <span class="price">${item.price}</span></div>
-                <div class="info-shipping">Free shipping</div>
+                <div class="info-price">Ціна: <span class="price">${item.price}</span></div>
+                <div class="info-shipping">Безкоштовна доставка</div>
                 
                 <div class="info-button to-cart" data-id="${item.id}">
-                    <a href="#!" class="btn btn-submit add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</a>
+                    <a href="#!" class="btn btn-submit add-to-cart"><i class="fas fa-cart-plus"></i> Додати до кошика</a>
                 </div>
 
-                <h2 class="qty-header py-2">Amount:</h2>     
+                <h2 class="qty-header py-2"></h2>     
                     
                 <div class="qty qty-buttons">
                     <div class="number-input quantity" data-id="${item.id}">
@@ -78,7 +78,7 @@ function CardProduct(productList, item) {
 
                 <div class="info-description">${item.description}</div>
                 <div class="info-link">
-                <a class="btn-link far fa-heart add-to-wishlist" href="#!" data-id="${item.id}">&nbsp;Add to wish list</a>
+                <a class="btn-link far fa-heart add-to-wishlist" href="#!" data-id="${item.id}">&nbsp;Додати до улюбленого</a>
                 </div>
             </div>    
         
@@ -192,12 +192,12 @@ function Cart(tax = 0.07, shipping = 0) {
     this.populateShoppingCart = (products) => {
         let result = `
         <div class="row header">
-                        <div class="cell">Cover</div>
-                        <div class="cell">Product</div>
-                        <div class="cell">Price</div>
-                        <div class="cell">Quantity</div>
-                        <div class="cell">Total</div>
-                        <div class="cell">Action</div>
+                        <div class="cell">Фото</div>
+                        <div class="cell">Назва</div>
+                        <div class="cell">Ціна</div>
+                        <div class="cell">Кількість</div>
+                        <div class="cell">Загальна сума</div>
+                        <div class="cell">Видалити</div>
         </div>`;
         cart.forEach(item => result += cartItemTemplate(item, findItem(products, item.id)));
         return result;
@@ -541,7 +541,7 @@ async function fetchData(url) {
 
 function main() {
 
-    const url = "https://my-json-server.typicode.com/couchjanus/db";
+    const url = "https://my-json-server.typicode.com/Viktoriya459/db";
 
 
     const productContainer = document.querySelector('.product-container');
@@ -709,50 +709,40 @@ template.innerHTML = `
         <div class="container page-footer">
             <section class="footer-main">
                 <div class="footer-main-item">
-                    <h3 class="footer-title">About</h3>
+                    <h3 class="footer-title">ІНФОРМАЦІЯ</h3>
                     <ul>
-                        <li><a href="">Services</a></li>
-                        <li><a href="">Profiles</a></li>
-                        <li><a href="">Priceas</a></li>
-                        <li><a href="">Customers</a></li>
-                        <li><a href="./exercises/index.html">Exercises</a></li>
+                        <li><a href="">Умови оплати та доставки</a></li>
+                        <li><a href="">Повернення товару</a></li>
+                        <li><a href="">Гарантійні зобов’язання</a></li>
+
                     </ul>
                 </div>
                 <div class="footer-main-item">
-                    <h3 class="footer-title">Resources</h3>
+                    <h3 class="footer-title">ГРАФІК РОБОТИ</h3>
                     <ul>
-                        <li><a href="">Docs</a></li>
-                        <li><a href="">Blog</a></li>
-                        <li><a href="">eBooks</a></li>
-                        <li><a href="">Webinars</a></li>
+                        <li>Пн. - Пт. 10:00 - 18:00</li>
+                        <li>Сб. - Нд. Вихідний</li>
+
                     </ul>
                 </div>
                 <div class="footer-main-item">
-                    <h3 class="footer-title">Contact</h3>
+                    <h3 class="footer-title">КОМУНІКАЦІЯ</h3>
                     <ul>
-                        <li><a href="">Help</a></li>
-                        <li><a href="">Sales</a></li>
-                        <li><a href="">Advertise</a></li>
+                    <li><a href="tel:+380123456789"><i class="fas fa-phone"></i> +38 (012) 345-67-89</a></li>
+                    <li><a href="mailto:example@gmail.com"><i class="far fa-envelope"></i> example@gmail.com</a></li>
+                    <li><a href="#!"><i class="fab fa-viber"></i> Viber</a></li>
+                    <li><a href="#!"><i class="fab fa-telegram"></i> Telegram</a></li>
                     </ul>
                 </div>
             </section>
 
-            <section class="footer-social py-3">
-                <ul class="footer-social-list">
-                    <li><a href=""><i class="fab fa-facebook"></i></a></li>
-                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                    <li><a href=""><i class="fab fa-github"></i></a></li>
-                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href=""><i class="fab fa-youtube"></i></a></li>
-                </ul>
-            </section>
+            
            
             <section class="footer-ligal">
                 <ul class="footer-ligal-list">
-                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">&copy; 2024 All Rights Reserved</a></li>
                     <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">&copy; 2024 Copyright Shopaholic Inc.</a></li>
+
                 </ul>
                 
             </section>

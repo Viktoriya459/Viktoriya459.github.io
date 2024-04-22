@@ -10,34 +10,52 @@
 <body>
     <!-- page header -->
     <header class="page-header mb-3">
-        <!-- brand -->
-        <a href="/index.html" class="brand">Shopaholic</a>
-        <label for="toggler">&nbsp;<i class="fas fa-bars"></i>&nbsp;</label>
-        <input type="checkbox" id="toggler">
-        <!-- navigation -->
-        <nav class="navbar">
-            <a href="/index.html">Home</a>
-            <a href="/catalog.html">Catalog</a>
-            <a href="./blog.html">Blog</a>
-            <a href="/about.html">About</a>
-            <a href="/contact.html">Contact</a>    
-        </nav>
+      <!-- brand -->
 
-        <nav class="toolbar">
-            <a href="#" class="far fa-heart"></a>
-            <a href="/cart.html" class="fas fa-dolly">(<span id="cart-amount">0</span>)</a>
-            <a href="#" class="far fa-user"></a>
-        </nav>
-    </header>
+      <label for="toggler">&nbsp;<i class="fas fa-bars"></i>&nbsp;</label>
+      <input type="checkbox" id="toggler">
+      <!-- navigation -->
+      <nav class="navbar">
+          <a href="/index.html" class="fas fa-home"></a>
+          <a href="/catalog.html">Каталог</a>
+          <a href="/about.html">Про нас</a>
+          <a href="/contact.html">Контакти</a> 
+          <a href="/MyShop/index.html">My Site</a>    
+          <a href="./exercises/index.html">Exercises</a> 
+      </nav>
+      <section class="header-social py-3">
+          <ul class="header-social-list">
+              <li><a href=""><i class="fab fa-facebook"></i></a></li>
+              <li><a href=""><i class="fab fa-twitter"></i></a></li>
+              <li><a href=""><i class="fab fa-instagram"></i></a></li>
+              <li><a href=""><i class="fab fa-github"></i></a></li>
+              <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+              <li><a href=""><i class="fab fa-youtube"></i></a></li>
+          </ul>
+      </section>
+      <nav class="toolbar">
+          <a href="#" class="far fa-heart"></a>
+          <a href="/cart.html" class="fas fa-dolly">(<span id="cart-amount">0</span>)</a>
+      </nav>
+      <!-- registration/authentication -->
+      <div class="sign-up">
+          <a href="#!" class="fas fa-user"> Особистий кабінет</a>
+      </div>
+      <!-- search form -->
+      <form id="search-form">
+          <input type="text" id="search-input" placeholder="Пошук...">
+          <a href="#!" class="fas fa-search"></a>
+      </form>
+  </header>
     <section class="breadcrumb-bg-light mt-5">
         <div class="container py-3 px-5">
             <div class="breadcrumb-container">
                 <div class="breadcrumb-title">
-                    Billing information
+                    Інформація для доставки
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Checkout</li>
+                    <li class="breadcrumb-item"><a href="/index.html" class="fas fa-home"></a></li>
+                    <li class="breadcrumb-item active">Оформити покупку</li>
                 </ul>
             </div>
         </div>
@@ -53,31 +71,31 @@
               <div class="form-container">
                 <div class="input-group mb-3">
                   <div>
-                    <label class="form-label small text-uppercase">Full name</label>
+                    <label class="form-label small text-uppercase">ПІБ</label>
                     <input class="form-control" type="text" name="name" placeholder="Enter your full name">
                   </div>
                   <div>
-                    <label class="form-label small text-uppercase">Email address</label>
+                    <label class="form-label small text-uppercase">Email</label>
                     <input class="form-control" type="email" name="email" placeholder="Enter your email address">
                   </div>
                 </div>
                 <div class="input-group mb-3">
                   <div>
-                    <label class="form-label small text-uppercase">Address 1</label>
+                    <label class="form-label small text-uppercase">Адреса</label>
                     <input class="form-control" type="text" name="address1" placeholder="Enter your main address">
                   </div>
                   <div>
-                    <label class="form-label small text-uppercase">Address 2</label>
+                    <label class="form-label small text-uppercase">Додаткова адреса</label>
                     <input class="form-control" type="text" name="address2" placeholder="Enter your alternative address">
                   </div>
                 </div>
                 <div class="input-group mb-3">
                   <div>
-                    <label class="form-label small text-uppercase">City</label>
+                    <label class="form-label small text-uppercase">Місто</label>
                     <input class="form-control" type="text" name="city" placeholder="Enter your city">
                   </div>
                   <div>
-                    <label class="form-label small text-uppercase">City postal code</label>
+                    <label class="form-label small text-uppercase">Поштовий індекс</label>
                     <input class="form-control" type="text" name="zipcode" placeholder="Enter city postal code">
                   </div>
                 </div>
@@ -110,8 +128,8 @@
                     <li class="py-1 mb-3">
                       <p class="text-muted mb-1">Cart total: $75.00</p>
                     </li>
-                    <li class="py-1 mb-3"><a class="btn btn-outline-primary" href="/cart.html"> <i class="fas fa-shopping-cart me-2"></i>Back to cart</a></li>
-                    <li class="py-1 mb-3"><a class="btn btn-primary" href="completed.html"> <i class="far fa-credit-card me-2"></i>Place order</a></li>
+                    <li class="py-1 mb-3"><a class="btn btn-outline-primary" href="/cart.html"> <i class="fas fa-shopping-cart me-2"></i>Назад до кошика</a></li>
+                    <li class="py-1 mb-3"><a class="btn btn-primary" href="completed.html"> <i class="far fa-credit-card me-2"></i>Підтвердити замовлення</a></li>
                   </ul>
                 </div>
               </div>

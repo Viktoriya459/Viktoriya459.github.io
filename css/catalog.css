@@ -27,7 +27,7 @@ main .container h2 {
             top:1rem;
             right: 1rem;
             z-index: -1;
-            a {
+            & a {
                 background-color: #fff;
                 color: var(--anchor-color);
                 
@@ -40,7 +40,7 @@ main .container h2 {
                 
             }
 
-            a:hover{
+            & a:hover {
                 background-color: var(--anchor-active-color);
                 color: #fff;
             }
@@ -58,7 +58,7 @@ main .container h2 {
                 left: 0;
                 z-index: 10;
             }
-            img {
+            & img {
                 object-fit: cover;
                 max-width: 100%;
                 display: block;
@@ -68,7 +68,7 @@ main .container h2 {
         }
         .content {
             padding: .5rem;
-            h3 {
+            & h3 {
                 padding-bottom: .5rem;
                 text-align: center;
                 font-size: 1rem;

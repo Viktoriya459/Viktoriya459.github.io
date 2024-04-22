@@ -38,7 +38,7 @@
         }
     }
 
-    & .footer-social {
+    /* & .footer-social {
         background-color: var(--footer-social-background-color);
         text-align: center;
         display: flex;
@@ -56,7 +56,7 @@
         > .footer-social-list > li > a:hover > i {      
             color: var(--anchor-active-color);
         } 
-    }
+    } */
 
     & .footer-ligal {
         background-color: var(--footer-ligal-background-color);

@@ -9,23 +9,43 @@
 </head>
 <body>
     <!-- page header -->
-    <header class="page-header">
+    <header class="page-header mb-3">
         <!-- brand -->
-        <a href="/index.html" class="brand">Shopaholic</a>
+
+        <label for="toggler">&nbsp;<i class="fas fa-bars"></i>&nbsp;</label>
+        <input type="checkbox" id="toggler">
         <!-- navigation -->
         <nav class="navbar">
-            <a href="/index.html">Home</a>
-            <a href="/catalog.html">Catalog</a>
-            <a href="./blog.html">Blog</a>
-            <a href="/about.html">About</a>
-            <a href="/contact.html">Contact</a>    
+            <a href="/index.html" class="fas fa-home"></a>
+            <a href="/catalog.html">Каталог</a>
+            <a href="/about.html">Про нас</a>
+            <a href="/contact.html">Контакти</a> 
+            <a href="/MyShop/index.html">My Site</a>    
+            <a href="./exercises/index.html">Exercises</a> 
         </nav>
-
+        <section class="header-social py-3">
+            <ul class="header-social-list">
+                <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-github"></i></a></li>
+                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                <li><a href=""><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </section>
         <nav class="toolbar">
             <a href="#" class="far fa-heart"></a>
             <a href="/cart.html" class="fas fa-dolly">(<span id="cart-amount">0</span>)</a>
-            <a href="#" class="far fa-user"></a>
         </nav>
+        <!-- registration/authentication -->
+        <div class="sign-up">
+            <a href="#!" class="fas fa-user"> Особистий кабінет</a>
+        </div>
+        <!-- search form -->
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Пошук...">
+            <a href="#!" class="fas fa-search"></a>
+        </form>
     </header>
     <section class="breadcrumb-bg-light mt-5">
         <div class="container py-3 px-5">
@@ -34,8 +54,8 @@
                     Catalog
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Catalog</li>
+                    <li class="breadcrumb-item"><a href="/index.html" class="fas fa-home"></a></li>
+                    <li class="breadcrumb-item active">Каталог</li>
                 </ul>
             </div>
         </div>
@@ -43,20 +63,20 @@
     <section class="" id="catalog">
         <aside id="sidebar">
             <div class="sidebar-wrapper">
-                <header><h2>Categories</h2></header>
+                <header><h2>Категорії</h2></header>
                 <span id="category-container"></span>
-                <h2 class="text-uppercase mb-4">Show only</h2>
+                <h2 class="text-uppercase mb-4">Фільтр</h2>
                 <span class="show-only"></span>
             </div>
         </aside>
         <main>
             <div class="container py-3 px-4">
                 <header class="header">
-                    <h2 class="text-center">Our <span>Products</span></h2>
+                    <h2 class="text-center"> <span>Товари</span></h2>
                 </header>
                 <div class="row mb-3 align-items-center">
                     <div class="col mb-2 mb-lg-0">
-                      <p class="text-sm text-muted mb-0">Showing 1–12 of 53 results</p>
+                      <p class="text-sm text-muted mb-0">Показувати 1–12 з 53 результатів</p>
                     </div>
                     <div class="col">
                       <select id="selectpicker" class="form-select form-select-lg mb-2 text-sm text-muted" name="sorting" data-width="200" data-title="Default sorting">

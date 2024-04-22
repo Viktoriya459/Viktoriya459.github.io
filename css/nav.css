@@ -19,6 +19,28 @@
         font-weight: 600;
         font-size: 1.1rem;
     }
+    & .header-social {
+        background-color: var(--footer-social-background-color);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        > .header-social-list {
+             > li {
+                display: inline-block;
+                > a > i {
+                font-size: 1.25rem;
+                color: var(--footer-a-color);
+                margin-right: .5rem;
+
+                transition: transform 0.3s ease-in-out;
+                }
+            }
+        } 
+        > .header-social-list > li > a:hover > i {      
+            color: var(--anchor-active-color);
+            transform: rotate(360deg);
+        } 
+    }
     > .navbar {
         position: absolute;
         top: 99.9%;

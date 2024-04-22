@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 // import Hello, {Calc} from './components/Hello';
 // import Post from './components/Post';
-import Blog from './components/Blog';
+import PostList from './components/PostList';
 
 // function Welcome() {
 //   return <h1>Hello component</h1>;
@@ -62,20 +62,20 @@ import Blog from './components/Blog';
 
 
 function App() {
-  const [count, setCount] = useState(0);
-  const today = new Date()
+  // const [count, setCount] = useState(0);
+  // const today = new Date()
 
-  const post = {
-    "id": "1",
-    "firstName": "John",
-    "lastName": "Doe",
-    "numPosts": 5,
-    "numComments": 24,
-    "numLikes": 59
-  }
+  // const post = {
+  //   "id": "1",
+  //   "firstName": "John",
+  //   "lastName": "Doe",
+  //   "numPosts": 5,
+  //   "numComments": 24,
+  //   "numLikes": 59
+  // }
   return (
     <>
-      <div>
+      {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -87,11 +87,11 @@ function App() {
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
-        </button>
+        </button> */}
         {/* <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p> */}
-      </div>
+      {/* </div> */}
 
       {/* {jsxEl}
 
@@ -112,7 +112,7 @@ function App() {
       <Hello name="Hello component" />
       <h3 style={{ backgroundColor:'blue', color:'gold'}}>It's today: {today.toLocaleDateString()}</h3> */}
       {/* <Post post={post} /> */}
-      <Blog />
+      <PostList />
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>

@@ -10,34 +10,51 @@
 <body>
     <!-- page header -->
     <header class="page-header mb-3">
-        <!-- brand -->
-        <a href="/index.html" class="brand">Shopaholic</a>
-        <label for="toggler">&nbsp;<i class="fas fa-bars"></i>&nbsp;</label>
-        <input type="checkbox" id="toggler">
-        <!-- navigation -->
-        <nav class="navbar">
-            <a href="/index.html">Home</a>
-            <a href="/catalog.html">Catalog</a>
-            <a href="/blog.html">Blog</a>
-            <a href="/about.html">About</a>
-            <a href="/contact.html">Contact</a>    
-        </nav>
+      <!-- brand -->
 
-        <nav class="toolbar">
-            <a href="#" class="far fa-heart"></a>
-            <a href="/cart.html" class="fas fa-dolly">(<span id="cart-amount">0</span>)</a>
-            <a href="#" class="far fa-user"></a>
-        </nav>
-    </header>
+      <label for="toggler">&nbsp;<i class="fas fa-bars"></i>&nbsp;</label>
+      <input type="checkbox" id="toggler">
+      <!-- navigation -->
+      <nav class="navbar">
+          <a href="/index.html" class="fas fa-home"></a>
+          <a href="/catalog.html">Каталог</a>
+          <a href="/about.html">Про нас</a>
+          <a href="/contact.html">Контакти</a> 
+          <a href="/MyShop/index.html">My Site</a>    
+          <a href="./exercises/index.html">Exercises</a> 
+      </nav>
+      <section class="header-social py-3">
+          <ul class="header-social-list">
+              <li><a href=""><i class="fab fa-facebook"></i></a></li>
+              <li><a href=""><i class="fab fa-twitter"></i></a></li>
+              <li><a href=""><i class="fab fa-instagram"></i></a></li>
+              <li><a href=""><i class="fab fa-github"></i></a></li>
+              <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+              <li><a href=""><i class="fab fa-youtube"></i></a></li>
+          </ul>
+      </section>
+      <nav class="toolbar">
+          <a href="#" class="far fa-heart"></a>
+          <a href="/cart.html" class="fas fa-dolly">(<span id="cart-amount">0</span>)</a>
+      </nav>
+      <!-- registration/authentication -->
+      <div class="sign-up">
+          <a href="#!" class="fas fa-user"> Особистий кабінет</a>
+      </div>
+      <!-- search form -->
+      <form id="search-form">
+          <input type="text" id="search-input" placeholder="Пошук...">
+          <a href="#!" class="fas fa-search"></a>
+      </form>
+  </header>
     <section class="breadcrumb-bg-light mt-5">
         <div class="container py-3 px-5">
             <div class="breadcrumb-container">
                 <div class="breadcrumb-title">
-                    Shopping cart
                 </div>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Your cart</li>
+                    <li class="breadcrumb-item"><a href="/index.html" class="fas fa-home"></a></li>
+                    <li class="breadcrumb-item active">Кошик</li>
                 </ul>
             </div>
         </div>
@@ -54,31 +71,31 @@
             <div class="cart-sidebar">
                 <div class="card bg-light">
                     <div class="card-body">
-                      <h4 class="text-uppercase mb-4">Cart total</h4>
+                      <h4 class="text-uppercase mb-4">Картка</h4>
                       <ul class="list-unstyled">
                         <li class="d-flex align-items-center justify-content-between">
-                          <strong class="text-uppercase">Subtotal: </strong>&nbsp;
+                          <strong class="text-uppercase">Загальна сума: </strong>&nbsp;
                           <span class="text-muted small"><span class="cart-subtotal price">250</span></span>
                         </li>
                         <li class="d-flex align-items-center justify-content-between">
-                          <strong class="text-uppercase">Tax: </strong>&nbsp;
+                          <strong class="text-uppercase">Податок: </strong>&nbsp;
                           <span class="text-muted small"><span class="cart-tax price">2</span></span>
                         </li>
                         <li class="d-flex align-items-center justify-content-between">
-                            <strong class="text-uppercase">Shipping: </strong>&nbsp;
+                            <strong class="text-uppercase">Доставка: </strong>&nbsp;
                             <span class="text-muted small"><span class="cart-shipping price">2</span></span>
                           </li>
                         <li class="border-bottom my-2"></li>
                         <li class="d-flex align-items-center justify-content-between mb-4">
-                          <strong class="text-uppercase">Total:</strong>&nbsp;
+                          <strong class="text-uppercase">Всього:</strong>&nbsp;
                           <span class="text-muted small"><span class="cart-total price">250</span></span>
                         </li>
                         <li>
                           <form action="#">
                             <div class="input-group">
                               <input class="form-control mb-1" type="text" placeholder="Enter your coupon">
-                              <button class="btn btn-primary" type="submit"> <i class="fas fa-gift"></i>&nbsp;Apply coupon</button>
-                              <button class="btn btn-primary checkout"> <i class="fas fa-credit-card"></i>&nbsp;Checkout</button>
+                              <button class="btn btn-primary" type="submit"> <i class="fas fa-gift"></i>&nbsp;Ваша знижка</button>
+                              <a href="checkout.html" class="btn btn-primary checkout"> <i class="fas fa-credit-card"></i>&nbsp;Оформити замовлення</a>
                             </div>
                           </form>
                         </li>
@@ -97,9 +114,9 @@
       <div class="dialog-main">
         <a href="#!" title="Close" class="close fas fa-times"></a>
 
-        <h2>Something went wrong</h2>
+        <h2>Щось пішло не так</h2>
         <p class="message"></p>
-        <button>Login or sign up here</button>
+        <button>Зареєструйтесь або увійдіть</button>
       </div>
     </dialog>
 </body>
