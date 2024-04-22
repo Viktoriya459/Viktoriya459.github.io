@@ -1,26 +1,57 @@
 .catalog {
+    position: relative;
+
     .image {
-        a:hover {
-            color: var(--anchor-active-color);
-            text-decoration: underline;
+        object-fit: cover;
+        .badge {
+            display: inline-block;
+            text-align: center;
+            vertical-align: baseline;
+            position: absolute;
+            left: 11.6rem;
         }
     }
     .content {
-
+        padding: .3rem;
+        width: 11.5rem;
+        overflow: hidden;
+        & h2 {
+            color:black;
+            position: absolute;
+            bottom: 1.8rem;
+            left: 5rem;
+            padding-bottom: .5rem;
+            font-size: 1rem;
+        }
         .price {
             font-weight: 600;
             color:var(--anchor-active-color);
         }
-        > .price::after {
+        .price::after {
             color:var(--anchor-color);
             content:var(--currency-symbol);
         }
+        .price:nth-of-type(1) {
+            float: left;
+            text-decoration: line-through;
+        }
+        .price:nth-of-type(2) {
+            float: right;
+        }
     }
     .icons {
-        > a {
-
+        position: absolute;
+        top: 2.5rem;
+        left: 1.3rem;
+        & a {
+            display: inline-block;
+            margin: .1rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            text-align: center;
         }
-        > a:hover {
+        
+        & a:hover {
             color:var(--anchor-active-color);
             text-decoration: underline;
         }
@@ -42,4 +73,8 @@ aside {
 }
 .sidebar-wrapper {
     border: 1px solid #ddd;
+}
+.bg-sale {
+    background-color: red;
+    color: #f4f4f4;
 }

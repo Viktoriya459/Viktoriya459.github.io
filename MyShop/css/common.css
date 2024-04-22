@@ -28,8 +28,24 @@ li {
     display: inline-block;
     margin-right: 10px;
 }
-h3, h2 {
+h3, h2, h4 {
     text-align: center;
+    padding: .5rem;
+}
+
+.contacts {
+    text-align: center;
+
+    > ul li a:hover {
+        color: var(--anchor-active-color);
+        text-decoration: underline;
+    }
+    
+}
+.registration-form {
+    display: flex; 
+    justify-content: space-between;
+
 }
 
 /* padding */
