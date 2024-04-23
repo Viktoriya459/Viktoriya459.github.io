@@ -1,10 +1,12 @@
-.carousel {
-    display: flex;
-    align-items: center;
-    background: white;
-    justify-content: center;
+@media (max-width: 40rem) {
+    .carousel {
+        display: flex;
+        align-items: center;
+        background: white;
+        justify-content: center;
+        margin-top: 8rem;
+    }
 }
-
 .slider {
     height: 100px;
     margin: auto;

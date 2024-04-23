@@ -61,11 +61,13 @@
     }
     #toggler:checked ~ nav.navbar {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        background-color: beige;
     }
     > .toolbar {
         > a {
         font-size: 1.1rem;
         color: var(--anchor-color);
+        padding: .1rem;
         }
         > a:hover {
         color: var(--anchor-active-color);
@@ -73,8 +75,44 @@
         > a:active {
         color: blueviolet;
         }
+        
     }
 }
+
+@media (max-width: 40rem) {
+    .page-header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .header-social {
+        order: 4;
+        padding-bottom: 1rem;
+    }
+    .header-social-list {
+        margin: 0;
+        padding: 0; 
+        display: flex;
+        justify-content: center;
+    }
+    .header-social-list li {
+        list-style: none;
+        margin: 0 0.5rem;
+    }
+    .toolbar {
+        order: 3;
+        margin-top: 1rem;
+    }
+    .sign-up {
+        order: 5;
+        margin-top: 1rem;
+    }
+    #search-form {
+        order: 2;
+        margin-top: 1rem;
+    }
+
+}
+
 
 @media (min-width: 40rem) {
 
@@ -90,5 +128,4 @@
     .page-header label {
         display: none;
     }
-    
 }
