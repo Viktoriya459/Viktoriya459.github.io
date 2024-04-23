@@ -1,7 +1,9 @@
-#cabinet .container{
-    display: grid;
-    gap: 1em;
-    grid-template-columns: auto auto;
+@media (min-width:42rem) {
+    #cabinet .container{
+        display: grid;
+        gap: 1em;
+        grid-template-columns: auto auto;
+    }
 }
 
 .cabinet-main {
