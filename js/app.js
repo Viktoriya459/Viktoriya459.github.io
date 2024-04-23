@@ -1,4 +1,5 @@
 "use strict";
+// містить загальні функції, які використовуються в різних частинах програми.
 
 const currency = (total) => parseFloat(Math.round(total * 100) / 100).toFixed(2);
 const filterItem = (items, id) => items.filter(item => item.id != id);
@@ -31,6 +32,8 @@ const sortingOrders = [
     {key:"нижче-вище", value:"від меншої ціни"}, 
     {key:"вище-нижче", value:"від більшої ціни"}
 ];
+
+// містить Product і CardProduct
 
 function Product(id, name, price, image) {
     this.id = id;
@@ -141,8 +144,10 @@ function CardProduct(productList, item) {
     } 
 }
 
+// для роботи з кошиком
+
 function Cart(tax = 0.07, shipping = 0) {
-    // console.log("Cart constructor", this);
+
     this.tax = tax;
     this.shipping = shipping;
 
@@ -151,7 +156,6 @@ function Cart(tax = 0.07, shipping = 0) {
     let cart = store.init('basket');
 
     this.saveCart = function() {
-        // console.log(cart);
         store.set('basket', cart);
         cartAmount.textContent = shoppingCart.totalAmount();
     }
@@ -220,7 +224,7 @@ function Cart(tax = 0.07, shipping = 0) {
         document.querySelector('.cart-shipping').textContent = this.shipping;
         document.querySelector('.cart-total').textContent = (+this.totalInCart() + +this.tax + +this.shipping).toFixed(2);
     }
-    // 
+ 
     this.addItemToCart = function(product) {
 
         let inCart = cart.some(item => item.id === product.id);
@@ -322,6 +326,8 @@ function Cart(tax = 0.07, shipping = 0) {
 
 const starsTemplate = (n) => Array(n).fill('&starf;').concat(Array(5 - n).fill('&star;')).join('');
 
+// працює зі списком продуктів
+
 function ProductList(products) {
     
     this.products = products;
@@ -351,6 +357,8 @@ function ProductList(products) {
 
     this.getProductById = (id) => this.products.find(item => item.id == id);
 }
+
+// робота з категоріями товарів
 
 const liElement = (item) => `<li><a class="category-item" href="#!" data-id="${item.id}">${item.name}</a></li>`;
 
@@ -400,6 +408,7 @@ const populateCategories = (categoryContainer, categories) => {
 
 }
 
+// рендеринг товарів та категорій
 
 function renderCategory(productContainer, selector, products) {
     const categoryItems = document.querySelectorAll(selector);
@@ -536,13 +545,9 @@ async function fetchData(url) {
 }
 
 
-
-
-
 function main() {
 
     const url = "https://my-json-server.typicode.com/Viktoriya459/db";
-
 
     const productContainer = document.querySelector('.product-container');
 
@@ -607,22 +612,6 @@ function main() {
                 }
         }
 
-        // class Parent {
-        //     hello = "Hello world";
-
-        //     sayHi() {
-        //         return this.hello;
-        //     }
-        // }
-
-        // let myParent = new Parent();
-        // console.log(myParent.sayHi())
-
-        // class Child extends Parent {
-
-        // }
-        // let myChild = new Child();
-        // console.log(myChild.sayHi())
         const msgBoxId = document.getElementById('dialogBox');
        
         function showDialog(e) {
@@ -694,13 +683,11 @@ function main() {
                 displayError('Please enter a valid email address.')
                 return;
             }
-
         })
-
     }
-
-
 }
+
+// створення футера на сторінці
 
 const template = document.createElement('template');
 
@@ -760,3 +747,33 @@ if (document.readyState === 'loading') {
 } else {
     main();
 }
+
+// Реєстрація/авторизація
+
+document.getElementById('registration-form').addEventListener('submit', function(event) {
+    let password = document.getElementById('password').value;
+    let confirmPassword = document.getElementById('confirm-password').value;
+
+    if (password !== confirmPassword) {
+        alert("Паролі не співпадають!");
+        event.preventDefault();
+    } else {
+        
+        let isUserRegistered = true; 
+
+        if (isUserRegistered) {
+            window.location.href = "/checkout.html";
+            event.preventDefault(); 
+        }
+    }
+});
+
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
+
+    if (!username || !password) {
+        alert("Будь ласка, введіть ім'я користувача та пароль!");
+        event.preventDefault();
+    }
+});

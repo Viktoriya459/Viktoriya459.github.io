@@ -1,0 +1,26 @@
+#cabinet .container{
+    display: grid;
+    gap: 1em;
+    grid-template-columns: auto auto;
+}
+
+.cabinet-main {
+    border: 1px dotted red;
+    &.cabinet-main form button {
+        margin-top: 1em;
+    }
+}
+
+.cabinet-sidebar {
+    border: 1px dotted gold;
+    &.cabinet-sidebar form button {
+        margin-top: 5.4rem;
+    }
+}
+
+.cabinet-main form, .cabinet-sidebar form {
+    display: grid;
+    gap: 1em;
+    text-align: center;
+    margin-top: .4rem;
+}
