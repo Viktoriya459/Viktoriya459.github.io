@@ -19,7 +19,7 @@ export default Blog;
 
 // src/components/Blog.tsx
 
-// import React from "react"; 
+// ; 
 
 // class Blog extends React.Component {
 
