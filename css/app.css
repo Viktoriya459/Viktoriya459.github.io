@@ -258,7 +258,7 @@ a {
 }
 
 .btn-primary {
-    background-color: salmon;
+    background-color: rgb(148, 36, 148);
     border-color: maroon;
     color: white;
 }
@@ -266,7 +266,7 @@ a {
 .btn-primary:hover {
     background-color: white;
     border-color: maroon;
-    color: salmon;
+    color: rgb(148, 36, 148);
 }
 
 

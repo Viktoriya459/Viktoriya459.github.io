@@ -43,4 +43,13 @@
 
 .contact-sidebar {
     border: 1px dotted gold;
+    > ul > li {
+        text-align: left;
+        margin-top: 2rem;
+        color: var(--footer-a-color);
+    }
+    > ul > li > a:hover {
+        color: var(--anchor-active-color);
+        text-decoration: underline;
+    }
 }
