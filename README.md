@@ -1,5 +1,3 @@
-# My personal site
+# My personal site https://viktoriya459.github.io/
 # Вікторія Чередніченко
 # S4R WD G1
-# https://viktoriya459.github.io/
-# https://viktoriya459.github.io/MyShop/
