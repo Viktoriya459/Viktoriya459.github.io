@@ -1,9 +1,10 @@
-#contact .container{
-    display: grid;
-    gap: 1em;
-    grid-template-columns: auto 15rem;
+@media (min-width:42rem) {
+    #contact .container{
+        display: grid;
+        gap: 1em;
+        grid-template-columns: auto 15rem;
+    }
 }
-
 .contact-main {
     & .form-container {
         width: 100%;
