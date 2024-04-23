@@ -1,7 +1,7 @@
 /* catalog */
 
 main .container h2 > span {
-    color: var(--anchor-active-color);
+    color: var(--main-color);
 }  
 
 main .container h2 {

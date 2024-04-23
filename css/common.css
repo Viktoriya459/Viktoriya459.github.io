@@ -12,15 +12,15 @@
 
 footer {
     --footer-text-color: #fff;
-    --fuuter-bg-color: #000;
+    --fuuter-bg-color: #806363;
 }
 
 :root {
-    --primary-text-color: #000;
+    --primary-text-color: rgb(59, 59, 65);
     --primary-bg-color: #fff;
-    --main-color: #009;
-    --anchor-color: #333;
-    --anchor-active-color: rgba(250, 128, 114, 0.541);
+    --main-color: rgb(59, 59, 65);
+    --anchor-color: rgb(70 61 70);
+    --anchor-active-color: rgb(97, 12, 97);
     --primary-font-family: 'Roboto', sans-serif;
     --primary-font-size: 0.875rem;
     --currency-symbol: "\20B4";
@@ -60,10 +60,4 @@ h3 {
 
 ul {
     list-style: none;
-}
-
-
-
-p {
-    /* common property for p */
 }

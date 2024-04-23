@@ -3,7 +3,7 @@
     display: none;
 }
 .page-header {
-    background-color: white;
+    background-color: rgb(179, 138, 138);
     position: fixed;
     top: 0;
     left: 0;
@@ -14,11 +14,11 @@
     align-items: center;
     padding: .3rem 5%;
     /* brand */
-    > .brand {
+    /* > .brand {
         color: var(--anchor-active-color);
         font-weight: 600;
         font-size: 1.1rem;
-    }
+    } */
     & .header-social {
         background-color: var(--footer-social-background-color);
         text-align: center;
@@ -46,7 +46,6 @@
         top: 99.9%;
         left: 0;
         right: 0;
-        background-color: white;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         > a {
             font-size: 1.1rem;
@@ -76,9 +75,7 @@
         }
     }
 }
-/* .page-header .brand {
-    color: var(--anchor-active-color);
-} */
+
 @media (min-width: 40rem) {
 
     .page-header {

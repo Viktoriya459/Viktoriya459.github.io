@@ -3,7 +3,7 @@
 /* rgb 0-255 */
 
 /* app.css */
-
+/* 
 .svg-icon {
     > .svg-icon-item {
     width: 48px;
@@ -12,7 +12,7 @@
     stroke: currentColor;
     stroke-width: 2;
     }
-}
+} */
 
 .flex-container {
     display: flex;
@@ -46,14 +46,14 @@
     background-attachment: fixed;
 }
 
-.divider {
+/* .divider {
     background: url(/images/divider-bg.jpg);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-}
+} */
 
-.divider h1 {
+/* .divider h1 {
     font-size: 4vw;
     font-weight: 700;
     background: -webkit-gradient( 
@@ -68,7 +68,7 @@
         -webkit-background-clip: text;  
         -webkit-text-fill-color: transparent;
 
-}
+} */
 
 .text-right {
     text-align: right;
@@ -223,20 +223,20 @@ a {
     margin-top: 3rem;
 }
 
-.btn-red-gradient {
+/* .btn-red-gradient {
     color: #fff;
     background-image: linear-gradient(coral, orangered, firebrick, orangered);
     background-size: 100% 300%;
     background-position: 0 50%;
-    /* padding: .5rem 2rem .5rem 2rem; */
+
     padding: .5rem 2rem;
     border: 1px coral solid;
     border-radius: 8%;
-}
+} */
 
-.btn-red-gradient:hover {
+/* .btn-red-gradient:hover {
     background-position: 0 0;
-}
+} */
 
 .btn {
     background-color: hsl(0 0% 90%);

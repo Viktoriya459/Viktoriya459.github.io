@@ -2,11 +2,10 @@
 
 .page-footer {
 
-    --footer-background-color: #555;
-    --footer-social-background-color: #333;
-    --footer-ligal-background-color: #000;
+    --footer-background-color: rgb(179, 138, 138);
+    --footer-ligal-background-color: rgb(148, 110, 110);
     
-    --footer-a-color: #eee;
+    --footer-a-color: #502020;
     --footer-light-color: #fff;
     --footer-a-font-size: .85rem;
     & .footer-main {
@@ -16,6 +15,9 @@
         justify-content: space-evenly;
         padding: 1.25rem 1.8rem;
         & .footer-main-item {
+            > ul > li {
+                color: var(--footer-a-color);
+            }
             > ul > li > a {
                 color: var(--footer-a-color);
                 font-size: var(--footer-a-font-size);
@@ -74,9 +76,9 @@
             > li > a:hover {
                 color: var(--footer-a-color);
             }
-            > li:nth-child(2) {
+            /* > li:nth-child(2) {
                 flex: 1;
-            }
+            } */
         }
     }
 }
