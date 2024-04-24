@@ -544,7 +544,6 @@ async function fetchData(url) {
     })
 }
 
-
 function main() {
 
     const url = "https://my-json-server.typicode.com/Viktoriya459/db";
@@ -773,7 +772,11 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     let password = document.getElementById('password').value;
 
     if (!username || !password) {
-        alert("Будь ласка, введіть ім'я користувача та пароль!");
+        alert("Дані введені невірно, перевірте вірність введених даних!");
         event.preventDefault();
+    } else {
+        localStorage.setItem('username', username);
+        window.location.href = '/index.html';
     }
 });
+

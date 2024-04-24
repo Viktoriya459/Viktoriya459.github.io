@@ -61,7 +61,13 @@ h3 {
 ul {
     list-style: none;
 }
-
+.search-button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--anchor-color)
+}
 @media (max-width: 40rem) {
     .breadcrumb {
         margin-top: 7.5rem; 

@@ -3,23 +3,39 @@ import {useState, useEffect, useContext, createContext} from "react"
 // Потрібно створити компонент Header Потрібно створити компонент PostTitle Потрібно створити компонент PostMain
 const PostContext = createContext({});
 
-const Layout = ({ children }) => {
-    return <div className="layout">{children}</div>;
-  };
+  const Layout = ({children}) => {
+        return (
+            <div>
+                <Header />
+                <main>
+                {children}
+                </main>
+            </div>
+        )
+    }
   
 const Header = () => {
   const post = useContext(PostContext);
-  return <header>{post.cover}</header>;
+  return (
+  <header>
+    <PostTitle />
+    <PostMain />
+    </header>
+    )
 };
 
 const PostTitle = () => {
   const post = useContext(PostContext);
-  return <h1>{post.title}</h1>;
+  return (
+    <h1>{post.title}</h1>
+  );
 };
 
 const PostMain = () => {
   const post = useContext(PostContext);
-  return <main>{post.content}</main>;
+  return (
+    <main>{post.content}</main>
+    );
 };
 
 const Post = () => {
@@ -37,9 +53,7 @@ const Post = () => {
     return (
       <PostContext.Provider value={post}>
         <Layout>
-          <Header />
-          <PostTitle />
-          <PostMain />
+         
         </Layout>
       </PostContext.Provider>
     );
