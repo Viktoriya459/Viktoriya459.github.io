@@ -8,7 +8,7 @@
     }
 }
 .slider {
-    height: 100px;
+    height: 150px;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -47,8 +47,12 @@
 .category-item {
     display: block;
     position: relative;
+    
 }
-
+.category-item:hover img {
+    border: 2px solid rgb(97, 12, 97);
+    
+}
 .category-item-title {
     display: inline-block;
     color: var(--anchor-color);
@@ -57,7 +61,7 @@
     text-align: center;
     text-transform: uppercase;
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     padding: .5rem 1rem;
     transform: translate(-50%, -50%);
@@ -66,7 +70,7 @@
 .slider::before, .slider::after {
     background: linear-gradient(to right, #fff 0%, rgb(255 255 255 / 0) 100%);
     content: '';
-    height: 100px;
+    height: 150px;
     position: absolute;
     width: 200px;
     z-index: 2;
