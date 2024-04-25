@@ -19,7 +19,7 @@
 .slide-track {
     display: flex;
     width: calc(300px*14);
-    animation: carousel 50s linear infinite alternate;
+    animation: carousel 20s linear infinite alternate;
 }
 
 .slide {
@@ -40,7 +40,7 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-250px*7));
+        transform: translateX(calc(-230px*5));
     }
 }
 
@@ -51,7 +51,7 @@
 
 .category-item-title {
     display: inline-block;
-    color: black;
+    color: var(--anchor-color);
     background-color: white;
     font-size: .8rem;
     text-align: center;
