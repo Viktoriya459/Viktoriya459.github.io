@@ -5,7 +5,7 @@ const currency = (total) => parseFloat(Math.round(total * 100) / 100).toFixed(2)
 const filterItem = (items, id) => items.filter(item => item.id != id);
 const findItem = (items, id) => items.find(item => item.id == id);
 
-const compare = (key, order='acs') => (a, b) => {
+const compare = (key, order='asc') => (a, b) => {
     if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) return 0;
     
     const A = (typeof a[key] === 'string') ? a[key].toUpperCase() : a[key];
@@ -27,7 +27,7 @@ const findByProps = function(items, props, what) {
 }
 
 const sortingOrders = [
-    {key:"default", value: "Default sorting"}, 
+    {key:"default", value: "Default"}, 
     {key:"популярні", value:"популярні товари"}, 
     {key:"нижче-вище", value:"від меншої ціни"}, 
     {key:"вище-нижче", value:"від більшої ціни"}
@@ -393,7 +393,8 @@ function categoriesCollation(distinct, categories) {
 
 let sectionName = section => {
     let div = document.createElement('div');
-    div.setAttribute('class', 'py-2 px-4 bg-dark text-white mb-1');
+    div.setAttribute('class', 'py-2 px-4 bg-dark text-grey mb-1');
+    div.style.backgroundColor = 'rgb(179, 138, 138)';
     div.innerHTML = `<strong class="text-uppercase">${section}</strong>`;
     return div;
 }
@@ -543,6 +544,7 @@ async function fetchData(url) {
         return response.json()
     })
 }
+
 
 function main() {
 
