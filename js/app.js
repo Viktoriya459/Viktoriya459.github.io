@@ -42,7 +42,6 @@ function Product(id, name, price, image) {
     this.image = image;
 }
 
-
 function CardProduct(productList, item) {
     
     this.item = item;
@@ -142,6 +141,7 @@ function CardProduct(productList, item) {
         shoppingCart.addItemToCart(product);
         // document.getElementById('cart-amount').textContent = shoppingCart.totalAmount();
     } 
+    
 }
 
 // для роботи з кошиком
@@ -323,8 +323,7 @@ function Cart(tax = 0.07, shipping = 0) {
 
 }
 
-
-const starsTemplate = (n) => Array(n).fill('&starf;').concat(Array(5 - n).fill('&star;')).join('');
+const starsTemplate = (n) => Array(n).fill('&hearts;').concat(Array(5 - n).fill('&star;')).join('');
 
 // працює зі списком продуктів
 
@@ -379,7 +378,6 @@ const distinctSections = items => {
     let unique = [...new Set(mapped)];
     return unique;
 }
-
 
 function categoriesCollation(distinct, categories) {
     let result = [];
@@ -458,7 +456,6 @@ function renderSelect(selectPicker, products, productContainer) {
     });
 }
 
-
 function Store() {
 
     this.init = function(key) {
@@ -482,7 +479,6 @@ function Store() {
     }
     
 }
-
 
 const badgeTemplate = (item) => `
 <div class="form-check mb-1">
@@ -522,7 +518,6 @@ const renderShowOnly = (showOnly, products, productContainer) => {
     })
 }
 
-
 let shoppingCart =  new Cart();
 const cartAmount = document.getElementById('cart-amount');
 
@@ -544,7 +539,6 @@ async function fetchData(url) {
         return response.json()
     })
 }
-
 
 function main() {
 
@@ -702,7 +696,6 @@ template.innerHTML = `
                         <li><a href="">Умови оплати та доставки</a></li>
                         <li><a href="">Повернення товару</a></li>
                         <li><a href="">Гарантійні зобов’язання</a></li>
-
                     </ul>
                 </div>
                 <div class="footer-main-item">
@@ -710,7 +703,6 @@ template.innerHTML = `
                     <ul>
                         <li>Пн. - Пт. 10:00 - 18:00</li>
                         <li>Сб. - Нд. Вихідний</li>
-
                     </ul>
                 </div>
                 <div class="footer-main-item">
@@ -723,16 +715,11 @@ template.innerHTML = `
                     </ul>
                 </div>
             </section>
-
-            
-           
             <section class="footer-ligal">
                 <ul class="footer-ligal-list">
                     <li><a href="#">&copy; 2024 All Rights Reserved</a></li>
                     <li><a href="#">Privacy Policy</a></li>
-
-                </ul>
-                
+                </ul> 
             </section>
         </div>
     </footer>
