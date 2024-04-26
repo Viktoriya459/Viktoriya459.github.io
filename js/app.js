@@ -28,9 +28,9 @@ const findByProps = function(items, props, what) {
 
 const sortingOrders = [
     {key:"default", value: "Default"}, 
-    {key:"популярні", value:"популярні товари"}, 
-    {key:"нижче-вище", value:"від меншої ціни"}, 
-    {key:"вище-нижче", value:"від більшої ціни"}
+    {key:"popularity", value:"popularity"}, 
+    {key:"low-high", value:"low-high"}, 
+    {key:"high-low", value:"high-low"}
 ];
 
 // містить Product і CardProduct
