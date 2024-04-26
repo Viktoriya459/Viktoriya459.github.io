@@ -16,7 +16,7 @@
 .cabinet-sidebar {
     border: 1px dotted gold;
     &.cabinet-sidebar form button {
-        margin-top: 13.1rem;
+        margin-top: 10.3rem;
     }
 }
 
@@ -28,5 +28,9 @@
 }
 
 .cabinet-sidebar input, .cabinet-main input {
-    margin: 1rem;
+    margin: 0.3rem;
+    
+}
+.cabinet-sidebar label, .cabinet-main label {
+    font-weight: bold;
 }
