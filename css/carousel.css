@@ -50,7 +50,7 @@
     
 }
 .category-item:hover img {
-    border: 2px solid rgb(97, 12, 97);
+    border: 2px solid var(--anchor-color);
     
 }
 .category-item-title {

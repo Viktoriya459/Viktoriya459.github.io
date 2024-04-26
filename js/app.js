@@ -749,34 +749,34 @@ if (document.readyState === 'loading') {
 
 // Реєстрація/авторизація
 
-document.getElementById('registration-form').addEventListener('submit', function(event) {
-    let password = document.getElementById('password').value;
-    let confirmPassword = document.getElementById('confirm-password').value;
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('registration-form').addEventListener('submit', function(event) {
+        let password = document.getElementById('password-reg').value;
+        let confirmPassword = document.getElementById('confirm-password').value;
 
-    if (password !== confirmPassword) {
-        alert("Паролі не співпадають!");
-        event.preventDefault();
-    } else {
-        
-        let isUserRegistered = true; 
+        if (password !== confirmPassword) {
+            alert("Паролі не співпадають!");
+            event.preventDefault();
+        } else {
+            let isUserRegistered = true; 
 
-        if (isUserRegistered) {
-            window.location.href = "/checkout.html";
-            event.preventDefault(); 
+            if (isUserRegistered) {
+                window.location.href = "/checkout.html";
+                event.preventDefault(); 
+            }
         }
-    }
+    });
+
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+        let username = document.getElementById('username-login').value;
+        let password = document.getElementById('password-login').value;
+
+        if (!username || !password) {
+            alert("Дані введені невірно, перевірте вірність введених даних!");
+            event.preventDefault();
+        } else {
+            localStorage.setItem('username', username);
+            window.location.href = '/index.html';
+        }
+    });
 });
-
-document.getElementById('login-form').addEventListener('submit', function(event) {
-    let username = document.getElementById('username').value;
-    let password = document.getElementById('password').value;
-
-    if (!username || !password) {
-        alert("Дані введені невірно, перевірте вірність введених даних!");
-        event.preventDefault();
-    } else {
-        localStorage.setItem('username', username);
-        window.location.href = '/index.html';
-    }
-});
-

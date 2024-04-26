@@ -16,7 +16,7 @@
 .cabinet-sidebar {
     border: 1px dotted gold;
     &.cabinet-sidebar form button {
-        margin-top: 5.4rem;
+        margin-top: 13.1rem;
     }
 }
 
@@ -25,4 +25,8 @@
     gap: 1em;
     text-align: center;
     margin-top: .4rem;
+}
+
+.cabinet-sidebar input, .cabinet-main input {
+    margin: 1rem;
 }

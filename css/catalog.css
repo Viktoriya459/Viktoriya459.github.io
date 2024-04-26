@@ -25,7 +25,7 @@ main .container h2 {
         .icons {
             position: absolute;
             top:1rem;
-            right: 1rem;
+            right: 1.3rem;
             z-index: -1;
             & a {
                 background-color: #fff;
@@ -63,7 +63,6 @@ main .container h2 {
                 max-width: 100%;
                 display: block;
                 height: 15rem;
-                
             }
         }
         .content {
@@ -108,7 +107,9 @@ main .container h2 {
     }
 }
 
-
+img:hover {
+    border: 2px solid var(--anchor-color);
+}
 
 @media (min-width: 35rem) {
     #catalog {
