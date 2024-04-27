@@ -235,10 +235,14 @@ grid-row: 6;
     flex-direction: row;
 }
 
-/* .modal-body main, .modal-body aside {
+.modal-body main, .modal-body aside {
             
     flex: auto;
     width: 100%;
-} */
+}
+dialog {
+  width: 90%;
+  max-width: 90%;
+}
 
 } 
