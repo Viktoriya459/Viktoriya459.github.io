@@ -141,9 +141,7 @@ function CardProduct(productList, item) {
         shoppingCart.addItemToCart(product);
         // document.getElementById('cart-amount').textContent = shoppingCart.totalAmount();
     } 
-    
 }
-
 // для роботи з кошиком
 
 function Cart(tax = 0.07, shipping = 0) {

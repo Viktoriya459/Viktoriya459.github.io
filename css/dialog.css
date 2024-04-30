@@ -230,19 +230,19 @@ grid-row: 6;
 
 @media (max-width: 35rem) {
         
-.modal-body {
-    flex-wrap: wrap;
-    flex-direction: row;
-}
+    .modal-body {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
 
-.modal-body main, .modal-body aside {
-            
-    flex: auto;
-    width: 100%;
-}
-dialog {
-  width: 90%;
-  max-width: 90%;
-}
+    .modal-body main, .modal-body aside {
+                
+        flex: auto;
+        width: 100%;
+    }
+    dialog {
+      width: 90%;
+      max-width: 90%;
+    }
 
 } 
